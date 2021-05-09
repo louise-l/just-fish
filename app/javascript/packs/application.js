@@ -15,3 +15,12 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import { displayProducts } from './components/displayProducts'
+
+
+
+document.addEventListener('turbolinks:load', () => {
+  // Call  functions here
+  displayProducts();
+});
