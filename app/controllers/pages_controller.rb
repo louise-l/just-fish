@@ -7,5 +7,6 @@ class PagesController < ApplicationController
   def dashboard
     @recipes = Recipe.all
     @articles = Article.all
+    @galleries = Gallery.all
   end
 end
