@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   
   resources :articles
   resources :recipes
-  resources :galleries, only: [:update]
+  resources :galleries, only: [:edit, :update] do 
+    member do
+      delete :delete_image_attachement
+    end
+  end
 
 end

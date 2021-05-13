@@ -1,2 +1,23 @@
 <h1>Galleries#edit</h1>
 <p>Find me in app/views/galleries/edit.html.erb</p>
+
+
+<% if user_signed_in? %>
+  <% if current_user.admin  %>
+      <h1>Gérez les images</h1>
+
+            <h3><%= @gallery.name %></h3>
+            <h3><%= @gallery.description %></h3>
+            <%= simple_form_for(@gallery) do |f| %>
+              <%= f.file_field :images, multiple: true %>
+              <%= f.submit %>
+            <% end %>
+
+            <% @gallery.images.each do |image| %>
+              <div class="image-card-gallery">
+                <%= cl_image_tag(image.key, width: 150, height: 150) %>
+                <%= link_to 'delete image', delete_image_attachement_gallery_url(@gallery, image), method: :delete, data: { confirm: "Vous êtes sur le point de supprimer cette image. Etes vous sur ?" } %>
+              </div>
+            <% end %>
+  <% end %>
+<% end %>

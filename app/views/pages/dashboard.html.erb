@@ -15,3 +15,11 @@
   <% end %>
 <% end %>
 <%= link_to "Ajouter une recette", new_recipe_path %>
+
+
+<h2>Images</h2>
+<% @galleries.each do |gallery| %>
+  <%= link_to edit_gallery_path(gallery) do %>
+    <%= gallery.name %>
+  <% end %>
+<% end %>

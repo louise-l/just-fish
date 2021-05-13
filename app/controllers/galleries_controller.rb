@@ -13,7 +13,7 @@ class GalleriesController < ApplicationController
       flash.alert = "Impossible de mettre à jour la gallerie sans avoir selectionné d'images"
     else
       @gallery.images.attach(gallery_params[:images])
-      redirect_to galleries_path
+      redirect_to edit_gallery_path(@gallery)
     end
   end
 
@@ -25,10 +25,21 @@ class GalleriesController < ApplicationController
     @image_cloudinary = ActiveStorage::Blob.find(params[:format])
     @image_cloudinary.purge
     @image.purge
-    redirect_to galleries_path
+    
+    if @gallery.images.all.length == 0
+      set_default_image
+      flash.alert = "Vous avez supprimé la dernière image, nous en avons rajouté une par défaut"
+    end
+    redirect_to edit_gallery_path(@gallery)
   end
 
   private
+
+  def set_default_image
+    require 'open-uri'
+    default_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1620921123/Seeds/image_par_defaut_yw1vz3.jpg')
+    @gallery.images.attach(io:default_img, filename: 'images_default.jpg', content_type: 'images/jpg')
+  end
 
   def gallery_params
     params.require(:gallery).permit(:category, :format, images:[])
