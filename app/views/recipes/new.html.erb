@@ -1,0 +1,14 @@
+<h1>Recipe#new</h1>
+<p>Find me in app/views/recipe/new.html.erb</p>
+
+<% if user_signed_in? %>
+  <% if current_user.admin  %>
+      <h1>Ajouter une recette</h1>
+        <%= simple_form_for(@recipe) do |f| %>
+          <%= f.input :title %>
+          <%= f.file_field :image %>
+          <%= f.submit "Ajouter une recette"%>
+        <% end %>
+  <% end %>
+
+<% end %>

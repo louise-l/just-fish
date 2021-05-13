@@ -1,0 +1,8 @@
+<h1>Recipe#show</h1>
+<p>Find me in app/views/recipe/show.html.erb</p>
+
+<h1><%= @recipe.title %></h1>
+<% if @recipe.image.attached? %>
+  <%= cl_image_tag @recipe.image.key %>
+<% end %>
+

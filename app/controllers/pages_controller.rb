@@ -5,5 +5,7 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @recipes = Recipe.all
+    @articles = Article.all
   end
 end
