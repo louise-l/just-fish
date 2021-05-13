@@ -1,0 +1,36 @@
+ // Graphical variables
+@import "config/fonts";
+@import "config/colors";
+
+// External libraries
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+//  CSS partials
+@import "components/index";
+@import "pages/index";
+
+
+body{
+  margin: 0;
+  font-family: $body-font;
+  h1, h2, h3{
+    font-family: $header-font;
+  }
+}
+
+
+a{
+  text-decoration: none;
+  color:inherit;
+  &:hover{
+    text-decoration: none;
+    color:inherit;
+    cursor: pointer;
+  }
+}
+
+li{
+  list-style-type: none;
+}
+
