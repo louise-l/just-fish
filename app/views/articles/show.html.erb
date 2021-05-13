@@ -1,5 +1,5 @@
 <h1><%= @article.title %></h1>
-<p><%= @article.content %></p>
+<p><%= markdown(@article.content) %></p>
 <% if @article.image.attached? %>
   <%= cl_image_tag @article.image.key %>
 <% end %>
