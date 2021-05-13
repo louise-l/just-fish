@@ -28,7 +28,11 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
-    if @article.save
+    if @article.update(article_params)
+      if params[:article][:images].present?
+          @article.image.attach(image)
+      end
+      flash.notice = "L'article a été modifié"
       redirect_to dashboard_path
     else
       flash.notice = "Il y a eu un problème ... veuillez recommencer"

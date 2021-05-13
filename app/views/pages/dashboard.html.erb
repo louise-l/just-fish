@@ -1,0 +1,17 @@
+<h1>Dashboard</h1>
+
+<h2>Articles</h2>
+<% @articles.each do |article| %>
+  <%= link_to edit_article_path(article) do %>
+    <p><%= article.title %></p>
+  <% end %>
+<% end %>
+<%= link_to "Ajouter un article", new_article_path %>
+
+<h2>Recettes</h2>
+<% @recipes.each do |recipe| %>
+  <%= link_to edit_recipe_path(recipe) do %>
+    <%= recipe.title %>
+  <% end %>
+<% end %>
+<%= link_to "Ajouter une recette", new_recipe_path %>

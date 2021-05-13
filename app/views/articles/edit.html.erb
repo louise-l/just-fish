@@ -3,6 +3,11 @@
 <% if user_signed_in? %>
   <% if current_user.admin  %>
       <h1>Modifier un article</h1>
+      <% if @article.image.attached? %>
+        <%= cl_image_tag @article.image.key, width: 200, height: 200 %>
+      <% else %>
+        <p>Il n'y a pas d'image pour cet article</p>
+      <% end %>
       <p><%= @article.title %> </p>
         <%= simple_form_for(@article) do |f| %>
           <%= f.input :title %>
