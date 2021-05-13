@@ -1,0 +1,17 @@
+<h1>Articles#edit</h1>
+
+<% if user_signed_in? %>
+  <% if current_user.admin  %>
+      <h1>Modifier un article</h1>
+      <p><%= @article.title %> </p>
+        <%= simple_form_for(@article) do |f| %>
+          <%= f.input :title %>
+          <%= f.input :content %>
+          <%= f.input :visible, label: "Mettre en page d'accueil" %>
+          <%= f.file_field :image %>
+          <%= f.submit%>
+        <% end %>
+  <% end %>
+
+  <%= link_to 'Supprimer cet article', article_path(@article), method: :delete, data: { confirm: "Vous êtes sur le point de supprimer cet article. Etes vous sur ?" } %>
+<% end %>

@@ -1,0 +1,12 @@
+
+<% if user_signed_in? %>
+  <% if current_user.admin  %>
+      <h1>Nouvel article</h1>
+        <%= simple_form_for(@article) do |f| %>
+          <%= f.input :title %>
+          <%= f.input :content %>
+          <%= f.file_field :image %>
+          <%= f.submit%>
+        <% end %>
+  <% end %>
+<% end %>
