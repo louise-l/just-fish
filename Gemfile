@@ -33,7 +33,7 @@ gem 'cloudinary', '~> 1.16.0'
 gem 'simple_form'
 gem "redcarpet"
 gem 'font-awesome-sass', '~> 5.15.1'
-
+gem 'faker'
 
 
 # Reduces boot times through caching; required in config/boot.rb
