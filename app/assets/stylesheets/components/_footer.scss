@@ -1,0 +1,18 @@
+footer{
+  height:70vh;
+  display: flex;
+  align-items:flex-end;
+  background-size:cover;
+  background-position: center;
+  background-image: url(https://res.cloudinary.com/debeemobv/image/upload/v1621587735/Seeds/footer_zqz60h.png);
+  .container{
+    display: inline;
+    margin-bottom: 100px;
+    .global-infos{
+      display: flex;
+      section{
+        margin-right:100px;
+      }
+    }
+  }
+}

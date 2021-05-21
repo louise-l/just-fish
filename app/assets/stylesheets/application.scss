@@ -12,12 +12,18 @@
 
 
 body{
-  margin: 0;
+  margin: 100px 0 0 0;
   font-family: $body-font;
   h1, h2, h3{
     font-family: $header-font;
   }
 }
+
+.container{
+  margin: 48px;
+}
+
+
 
 
 a{
