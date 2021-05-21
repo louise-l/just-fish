@@ -1,0 +1,22 @@
+.card-product{
+display: flex;
+  .product-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  img{
+    object-fit: cover;
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .price-tag{
+    background-color: $light-bg;
+    padding: 4px 8px;
+    margin: 0 auto;
+    border-radius: 5px;
+    max-width: 60px;
+  }
+}
