@@ -12,12 +12,23 @@ const displayProducts = () => {
           if (element.availability.visible){
             // On les range dans un array
             productsOfTheWeek.push(element)
-            console.log(element.baseVariation.baseProduct.name)
           }
         });
 
+        console.log(productsOfTheWeek[0].baseVariation.baseProduct.image)
+
         productsOfTheWeek.forEach(product => {
-          // weeklyProducts.
+          weeklyProducts.insertAdjacentHTML("beforeend", `
+              <div class = 'card-product'>
+                <img src="${product.baseVariation.baseProduct.image}" alt="${product.baseVariation.baseProduct.category.name}">
+                <div class = 'product-description'>
+                  <h4>${product.baseVariation.baseProduct.name}</h4>
+                  ${product.baseVariation.packaging} 
+                  ${product.baseVariation.measureQuantity} 
+                  ${product.baseVariation.measureUnit.symbol} env.
+                  <div class = 'price-tag'>${product.price.price} €</div>
+                <div>
+              </div>`)
         })
         console.log(productsOfTheWeek)
 
