@@ -5,13 +5,31 @@ footer{
   background-size:cover;
   background-position: center;
   background-image: url(https://res.cloudinary.com/debeemobv/image/upload/v1621587735/Seeds/footer_zqz60h.png);
-  .container{
+  .container-footer{
+    margin: 24px;
     display: inline;
     margin-bottom: 100px;
     .global-infos{
       display: flex;
       section{
         margin-right:100px;
+      }
+    }
+  }
+}
+
+
+@media (max-width:600px) {
+  footer{
+    background: none;
+    height: auto;
+    background-color: $light-bg;
+    .container-footer{
+      .global-infos{
+        display: block;
+        section{
+          margin-right: 0;
+        }
       }
     }
   }

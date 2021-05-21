@@ -1,6 +1,6 @@
 <div class="navbar">
-    <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621584867/Seeds/Group_2_enuhm1.png"%>
-    <nav>
+    <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621610775/Seeds/Logo-removebg-preview_semzxt.png"%>
+    <nav class = desktop>
       <%= link_to "Accueil", root_path, class: current_page?(root_path) ? 'active' : ''%>
       <%= link_to "Selection de la semaine", root_path, class: ''%>
       <%= link_to "Nos produits", root_path, class: ''%>
@@ -8,5 +8,20 @@
       <%= link_to "Articles", root_path, class: ''%>
       <%= link_to "Infos pratiques", root_path, class: ''%>
     </nav>
+  <%# Petits élements pour la navbar mobile %>
+  <div>
+    <div class = 'nav-menu mobile' id = "nav-menu"><i class="fas fa-bars"></i></div>
+    <div class = 'nav-menu mobile' id = "nav-menu-open"><i class="fas fa-chevron-left"></i></div>
+  </div>
+  <div id="side-menu">
+    <nav>
+      <%= link_to "Accueil", root_path, class: ''%>
+      <%= link_to "Selection de la semaine", root_path, class: ''%>
+      <%= link_to "Nos produits", root_path, class: ''%>
+      <%= link_to "Recettes", root_path, class: ''%>
+      <%= link_to "Articles", root_path, class: ''%>
+      <%= link_to "Infos pratiques", root_path, class: ''%>
+    </nav>
+  </div>
 
 </div>

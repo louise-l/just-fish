@@ -1,5 +1,9 @@
 .navbar{
   background-color: $light-bg;
+  background-image: url(https://res.cloudinary.com/debeemobv/image/upload/v1621618041/Seeds/7BC4BB5F-2654-46D0-A806-20ACEFD9B3B4_1_105_c_ipm0he.jpg);
+  //object-fit: cover;
+  background-position: center;
+  background-size: cover;
   height: 100px;
   width: 100vw;
   display: flex;
@@ -7,6 +11,7 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
+  z-index: 10;
   //box-shadow:0px 5px 5px rgba(0, 0, 0, 0.11);
   img{
     margin: auto;
@@ -23,10 +28,64 @@
       padding-bottom: 10px;
       width: 100%;
       text-align: center;
+      font-family: $header-font;
     }
     .active, :hover{
       border-bottom: 4px solid $primary-orange;
       font-weight: 600;
     }
+  }
+  .mobile{
+    display: none;
+  }
+  #side-menu{
+    display: none;
+  }
+}
+
+
+@media (max-width:600px) {
+
+  .navbar{
+    .desktop{
+      display: none;
+    }
+    .mobile{
+      display: block;
+    }
+    .nav-menu{
+      color: $primary-orange;
+      font-size: 24px;
+      position: absolute;
+      left: 15px;
+      top: 30px;
+      background-color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    #nav-menu{
+      display: block;
+    }
+    #nav-menu-open{
+      display: none;
+
+    }
+    #side-menu{
+      display: block;
+      text-align: center;
+      background-color: $light-bg;
+      transform:translateX(-100vh);
+      transition: all 0.3s ease-out;
+      position: absolute;
+      top:100px;
+      z-index:10;
+      width:100vw;
+      nav{
+        display: flex;
+        flex-direction: column;
+        margin: 30px;
+      }
+    }
+
   }
 }
