@@ -1,7 +1,6 @@
 .navbar{
   background-color: $light-bg;
-  background-image: url(https://res.cloudinary.com/debeemobv/image/upload/v1621618041/Seeds/7BC4BB5F-2654-46D0-A806-20ACEFD9B3B4_1_105_c_ipm0he.jpg);
-  //object-fit: cover;
+  background-image:     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://res.cloudinary.com/debeemobv/image/upload/v1621618041/Seeds/7BC4BB5F-2654-46D0-A806-20ACEFD9B3B4_1_105_c_ipm0he.jpg);
   background-position: center;
   background-size: cover;
   height: 100px;
