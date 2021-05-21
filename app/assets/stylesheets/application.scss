@@ -17,13 +17,15 @@ body{
   h1, h2, h3{
     font-family: $header-font;
   }
+  .container{
+    margin: 56px auto;
+    text-align: center;
+    max-width: 1000px;
+  }
+  strong{
+    color: $primary-orange;
+  }
 }
-
-.container{
-  margin: 48px;
-}
-
-
 
 
 a{
@@ -38,5 +40,14 @@ a{
 
 li{
   list-style-type: none;
+}
+
+
+@media (max-width:600px) {
+.container{
+  padding: 20px;
+  margin: 0 auto;
+}
+
 }
 

@@ -1,6 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "colors";
 
 $cursive-font: 'Homemade Apple', cursive;
 $body-font: 'Roboto', sans-serif;
 $header-font: 'Oswald', sans-serif;
+
+
+h2{
+  font-size: 36px;
+  font-family: $header-font;
+  font-weight: bold;
+  color: $secondary-blue;
+  margin:0;
+}

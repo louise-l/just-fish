@@ -71,9 +71,21 @@ gallery1.images.attach(io:gallery1_img, filename: 'gallery1.jpg', content_type: 
 gallery1.save
 puts "."
 
+gallery2 = Gallery.new( name: 'homepage-about', description: "Photo de la section qui sommes nous")
+gallery2_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621611096/Seeds/Poissonniers-et-bouchers-min_kxcped.jpg')
+gallery2.images.attach(io:gallery2_img, filename: 'gallery2.jpg', content_type: 'images.jpg')
+gallery2.save
+puts "."
+
 
 puts "."
 
 puts "Creating texts"
 Text.create!(name:"horaires", content: 'du mardi au jeudi, de 14h à 17h')
+puts "."
+
+Text.create!(name:"qui-sommes-nous", content: "Il y a 4 ans, nous avons embarqué pour l'aventure Just Fish ! Ayant grandi au sein d'une famille de Grossistes en Produits de la Mer, nous souhaitions amener ces produits auprès des particuliers.
+  Just Fish, c'est du poisson frais, de qualité et au détail ! Nous vous proposons chaque semaine une sélection variée au fil des saisons et nous y ajoutons volontiers des conseils pour une cuisine simple et saine. 
+  Just Fish, c'est la Mer près de chez Vous : Nous garantissons la fraîcheur et la qualité grâce à des arrivages quotidiens et des filières réputées.
+  Notre Magasin se situe à Wargnies-le-Grand, à proximité de la voie rapide Valenciennes / Maubeuge. Vous y trouverez poissons en filets, dos, joues, ou pavés, poissons entiers, coquillages et crustacés, ainsi que des conserves artisanales et une sélection de vins.")
 puts "."

@@ -17,10 +17,12 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import { displayProducts } from './components/displayProducts'
+import { toggleMobileNavbar } from './components/toggleMobileNavbar'
 
 
 
 document.addEventListener('turbolinks:load', () => {
   // Call  functions here
   displayProducts();
+  toggleMobileNavbar();
 });
