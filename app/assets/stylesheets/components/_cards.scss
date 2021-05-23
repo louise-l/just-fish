@@ -1,5 +1,9 @@
 .card-product{
 display: flex;
+  h4{
+    color: $secondary-blue;
+    cursor: pointer;
+  }
   .product-description{
     display: flex;
     flex-direction: column;
@@ -11,12 +15,51 @@ display: flex;
     height: 150px;
     border-radius: 10px;
     margin-right: 10px;
+    cursor: pointer;
+
   }
-  .price-tag{
-    background-color: $light-bg;
-    padding: 4px 8px;
+}
+.price-tag{
+  background-color: $light-bg;
+  padding: 4px 8px;
+  margin: 0 auto;
+  border-radius: 5px;
+  max-width: 60px;
+}
+
+.show-product{
+  display: flex;
+  border-radius: 10px;
+  z-index: 11;
+  position: absolute;
+  background-color: white;
+  padding: 30px;
+  width: 80%;
+  height: auto;
+  max-height: 70vh;
+  margin: 0 auto;
+  top:180px;
+  left: calc(100vw - 90%);
+  align-items: center;
+
+  
+  .show-product-img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
     margin: 0 auto;
-    border-radius: 5px;
-    max-width: 60px;
+  }
+  .show-product-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: scroll;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .packaging-details{
+    text-align: center;
+    font-weight: bold;
   }
 }
