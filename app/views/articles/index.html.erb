@@ -1,6 +1,18 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<div class="container index-articles">
 
-<% @articles.each do |article| %>
-  <p><%= article.title %></p>
-<% end %>
+  <h1>Nos articles</h1>
+
+  <div class="index-articles-grid">
+    <% @articles.each do |article| %>
+    <div class="index-articles-card">
+    <%= link_to article_path(article), class: '' do %>
+      <% if article.image.attached? %>
+        <%= cl_image_tag article.image.key, class: ''%>
+      <% end %>
+      <h3><%= article.title %></h3>
+      <p><%= article.small_description %></p>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>

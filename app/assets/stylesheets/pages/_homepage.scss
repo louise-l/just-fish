@@ -146,6 +146,18 @@ header{
   overflow: auto;
 }
 
+.close-modal{
+  position:absolute;
+  font-size: 24px;
+  top: 20px;
+  right: 20px;
+  color:grey;
+  padding: 10px;
+  &:hover{
+    color:black;
+  }
+}
+
 
 @media (max-width:600px) {
   header{
@@ -167,6 +179,11 @@ header{
     .homepage-recipe{
       display: flex;
       flex-direction: column-reverse;
+    }
+    .weekly-products-presentation{
+      #weekly-products{
+        display: block;
+      }
     }
     .how-to-order{
       .how-to-order-steps{
