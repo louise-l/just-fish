@@ -1,6 +1,13 @@
-<h1><%= @article.title %></h1>
-<p><%= markdown(@article.content) %></p>
-<% if @article.image.attached? %>
-  <%= cl_image_tag @article.image.key %>
-<% end %>
+<div class="container show-article">
+  <% if @article.image.attached? %>
+    <%= cl_image_tag @article.image.key, class: 'article-image'%>
+  <% end %>
+  <h1><%= @article.title %></h1>
+  <article><%= markdown(@article.content) %></article>
+  <%= link_to "Voir tous nos articles", articles_path, class: 'button cta'%>
+
+</div>
+
+
+
 

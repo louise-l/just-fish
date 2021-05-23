@@ -5,7 +5,7 @@
       <%= link_to "Selection de la semaine", root_path, class: ''%>
       <%= link_to "Nos produits", root_path, class: ''%>
       <%= link_to "Recettes", root_path, class: ''%>
-      <%= link_to "Articles", root_path, class: ''%>
+      <%= link_to "Articles", articles_path, class: current_page?(articles_path) ? 'active' : ''%>
       <%= link_to "Infos pratiques", root_path, class: ''%>
     </nav>
   <%# Petits élements pour la navbar mobile %>
