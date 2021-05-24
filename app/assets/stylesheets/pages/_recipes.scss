@@ -1,3 +1,35 @@
 // Place all the styles related to the recipe controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.show-recipe{
+  display: flex;
+  flex-direction: column;
+
+  .recipe-image{
+    width: 70vw;
+    max-width: 700px;
+    height: auto;
+    margin: 30px auto;
+  }
+  h1{
+    color: $secondary-blue;
+     font-family: $cursive-font;
+     padding-top: 50px;
+    }
+}
+
+
+
+@media (max-width:600px) {
+
+  .show-recipe{
+
+  
+    .recipe-image{
+      width: 90vw;
+
+    }
+
+  }
+}
