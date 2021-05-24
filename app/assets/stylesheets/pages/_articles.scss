@@ -20,7 +20,7 @@
 
 .index-articles{
   h1{
-    color:$secondary-blue;
+    //color:$secondary-blue;
     padding: 50px;
   }
   .index-articles-grid{
@@ -43,6 +43,10 @@
         margin: 0 auto;
         text-align: left;
       }
+      h3{color: $secondary-blue}
+      .recipe-image{
+        height: 100%;
+      }
     }
   }
 }
@@ -63,6 +67,9 @@
 
     .article-image{
       height: 200px;
+    }
+    article{
+      width: 100%;
     }
   }
 
