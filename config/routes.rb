@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get :dashboard, to: "pages#dashboard"
+  get :about, to: "pages#about"
   
   resources :articles
   resources :recipes

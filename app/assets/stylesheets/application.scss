@@ -17,6 +17,9 @@ body{
   h1, h2, h3{
     font-family: $header-font;
   }
+  h1{
+    color: $secondary-blue;
+  }
   .container{
     margin: 56px auto;
     text-align: center;

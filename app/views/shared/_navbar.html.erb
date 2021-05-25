@@ -6,7 +6,7 @@
       <%= link_to "Nos produits", root_path, class: ''%>
       <%= link_to "Recettes", recipes_path, class: controller_name == 'recipes' ? 'active' : ''%>
       <%= link_to "Articles", articles_path, class: controller_name == 'articles' ? 'active' : ''%>
-      <%= link_to "Infos pratiques", root_path, class: ''%>
+      <%= link_to "Infos pratiques", about_path, class: current_page?(about_path) ? 'active' : ''%>
     </nav>
   <%# Petits élements pour la navbar mobile %>
   <div>
@@ -20,7 +20,7 @@
       <%= link_to "Nos produits", root_path, class: ''%>
       <%= link_to "Recettes", root_path, class: ''%>
       <%= link_to "Articles", root_path, class: ''%>
-      <%= link_to "Infos pratiques", root_path, class: ''%>
+      <%= link_to "Infos pratiques", about_path, class: ''%>
     </nav>
   </div>
 

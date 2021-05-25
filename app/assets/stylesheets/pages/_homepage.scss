@@ -59,26 +59,8 @@ header{
       justify-content: space-between;
     }
   }
-  .how-to-order{
-    h2{
-      color:black
-    }
-    padding-bottom: 50px;
-    .how-to-order-steps{
-      margin-top: 40px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      img{
-        width: 50px;
-        border-radius: 50%;
-        margin-bottom: 16px;
-      }
-      h3, p{
-        margin: 0;
-      }
-    
-    }
-  }
+  
+
   .weekly-products-presentation{
     margin: 100px 0;
     #weekly-products{
@@ -89,28 +71,7 @@ header{
     }
   }
 
-  .order-casamiam{
-    display: grid;
-    grid-template-columns: 20% 80%;
-    h2{color:black}
-    .casamiam-explanation{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    p{
-      width: 70%;
-    margin: 0 auto;
-  }
-    img{
-      width: 200px;
-    }
-    .app-logo{
-      width: 125px;
-      margin: 16px 0;
-    }
-  }
-
+  
   .who-are-we{
     h2{margin-bottom: 30px;}    
     .who-are-we-description{
@@ -185,18 +146,7 @@ header{
         display: block;
       }
     }
-    .how-to-order{
-      .how-to-order-steps{
-        display: block;
-        p{margin-bottom: 20px}
-      }
-    }
-    .order-casamiam{
-      display: block;
-      .mobile{
-        display: none;
-      }
-    }
+    
     .who-are-we{
       .who-are-we-description{
         display: flex;

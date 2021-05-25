@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class = 'about-title'>Infos pratiques</h1>
+
+  <div class="about">
+    <div class = 'about-details'>
+      <h2>Contact</h2>
+
+      <p>14 bis, Route nationale <br>
+      59144 Wargnies-le-Grand <br>
+      06-07-06-06-07 <br>
+      addresse@mail.fr</p>
+
+      <h2>Horaires</h2>
+      <p><%= markdown(@horaires.content) %></p>
+
+      <h2>Livraisons</h2>
+      <p><%= markdown(@livraisons.content) %></p>
+    </div>
+    <%= cl_image_tag @picture_about%>
+
+  </div>
+
+  <%= link_to "Venez nous voir !", "https://goo.gl/maps/eSEcWVnXH3gtq4fZ8", class: 'button cta-strong', target: :_blank%>
+
+  <%= render 'shared/order' %>
+
+
+
+
+</div>
