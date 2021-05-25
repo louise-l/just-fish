@@ -3,11 +3,11 @@
     <h3>Just Fish Poissonnerie</h3>
     <div class = "global-infos">
       <section class="location">
-        <p><%= markdown($contact) %></p>
+        <p><%= markdown(Textbox.find_by(name:"contact").content) %></p>
       </section>
 
       <section class="horaires">
-        <p> <%= markdown($horaires) %></p>
+        <p> <%= markdown(Textbox.find_by(name:"horaires").content) %></p>
       </section>
 
     </div>
