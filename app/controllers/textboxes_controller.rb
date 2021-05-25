@@ -1,6 +1,6 @@
 class TextboxesController < ApplicationController
   def index
-    @texts = Textbox.order(created_at: :desc)
+    @texts = Textbox.order(created_at: :asc)
   end
 
 

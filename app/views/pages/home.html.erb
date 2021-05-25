@@ -27,7 +27,7 @@
       <h2><%= @recipe.title %></h2> 
       <%= link_to "Voir la recette", root_path, class: 'button cta-strong'%>
     </div>
-    <%= cl_image_tag @recipe.image.key%>
+    <%= cl_image_tag @recipe.cover_image.key%>
   </section>
 
   <div class="weekly-products-presentation">
