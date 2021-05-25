@@ -34,21 +34,42 @@ puts "."
 puts "Creating articles"
 
 
-article1 = Article.new( title: 'Panier Noël', content: Faker::Markdown.sandwich, visible: true, small_description: 'Le meilleur des paniers de noël à découvrir')
-article1_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1620903904/Seeds/plateau-repas-poisson_ef4hfk.jpg')
+article1 = Article.new( title: 'La pêche responsable en Norvège, comment ça se passe ?', content: "##LA PÊCHE RESPONSABLE, C’EST QUOI ?
+
+  Une mer sans poisson ? C’est possible ça ? On n’en a pas envie en tout cas ! Et pourtant avec 4,6 millions de navires de pêche dans le monde, c’est 54000 kg de poissons et fruits de mers chaque seconde qui sont pêchés dans les océans… alors, si on veut continuer de voir des poissons nager dans nos océans, nous devons mettre en place de quoi stopper cette surpêche.
+  
+  L’état des océans fait parti des enjeux environnementaux majeures de notre époque. Le poisson est une des ressources les plus consommées au monde. Alors que changer pour protéger ces espèces menacées ?
+  
+  
+  ##COMMENT CONSOMMER RESPONSABLE ?
+  
+  La pêche durable repose dans un premier temps sur une prise de conscience. Les consommateurs peuvent avoir un impact important en changeant tout simplement leur consommation de poisson. En effet, plus nous achetons des produits marins, plus il y aura un besoin important de pêche.
+  
+  La solution la plus cohérente est donc de commencer par réduire notre consommation de produits marins, ce qui n’est pas bien compliqué : beaucoup d’alternatives appétissantes et bonnes pour la santé nous attendent ! Cela peut commencer par des actions simples comme par exemple participer au Lundi vert, qui a pour principe de ne pas manger de viande ni de poisson tous les lundis de la semaine. Facile à mettre en place, non ? En plus, ça fait du bien au porte-monnaie, et à notre santé, puisque ne nous le cachons pas, les produits de la mer peuvent être toxiques en raison de la pollution des océans.", visible: true, small_description: "  L’état des océans fait parti des enjeux environnementaux majeures de notre époque. Le poisson est une des ressources les plus consommées au monde. Alors que changer pour protéger ces espèces menacées ?  ")
+article1_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621957843/Seeds/paul-einerhand-qLIglFCcAeo-unsplash_qkm8iw.jpg')
 article1.image.attach(io:article1_img, filename: 'article1.jpg', content_type: 'images.jpg')
 article1.save
 puts "."
 
 
-article2 = Article.new( title: 'Panier Pâques', content: Faker::Markdown.sandwich, visible: false, small_description: 'Le meilleur des paniers de pâques à découvrir')
-article2_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1620919427/Seeds/posson_paques_h68zhi.jpg')
+article2 = Article.new( title:"La pêche à la crevette grise sur le littoral du Nord Pas de Calais", content: "Que ce soit à Dunkerque ou Bray-Dunes sur les bords de la Mer du Nord, à Granville ou Saint Pair sur Mer dans la Manche ou encore à Saint Jean de Monts dans les eaux de l’Atlantique, on peut voir des pêcheurs dans l’eau poussant leurs filets en quête du crustacé.
+
+  Sur notre littoral du **Nord Pas de Calais**, on pratique la pêche à la crevette grise en famille, entre amis ou avec d’autres pêcheurs solitaires.
+  
+  A Dunkerque, on avale le la, et ont dit *pêche à crevette*.
+
+  On peut voir plusieurs dizaines de pêcheurs à crevettes dans l’eau en même temps surtout à la belle saison.
+  
+  Locaux ou estivants, qu’ils soient petits ou grands, poussent leurs filets le long des plages en quête du crustacé, attirant sur eux la curiosité des promeneurs impatients de voir les bestioles prises au piège dans le filet.
+  ##Petit historique de la pêche à la crevette  
+  La pêche à la crevette fait partie de l’histoire des populations littorales.  La pêche de la crevette grise permettait un complément alimentaire ou de revenus pour la famille. ", visible: false, small_description: "La pêche à la crevette grise se pratique sur les plages de sable, c’est une activité populaire qui peut être pratiquée par tous, même si elle requiert une certaine condition physique pour marcher dans l’eau tout en poussant le filet.")
+article2_img = URI.open('https://www.opalesurfcasting.net/IMG/pecheuse_de_crevettes_a_dunkerque.jpg')
 article2.image.attach(io:article2_img, filename: 'article2.jpg', content_type: 'images.jpg')
 article2.save
 puts "."
 
 puts "Creating recipes"
-recipe1 = Recipe.new( title: 'Filet de Flétan')
+recipe1 = Recipe.new( title: 'Filet de Flétan aux échalottes et vin blanc')
 recipe1_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1620920804/Seeds/recette_just_fish_fle%CC%81tan_ohvjcc.jpg')
 recipe1.image.attach(io:recipe1_img, filename: 'recipe1.jpg', content_type: 'images.jpg')
 recipe1_img2 = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621434142/Seeds/Capture_d_e%CC%81cran_2021-05-19_a%CC%80_16.22.13_p1fws7.png')
@@ -56,8 +77,8 @@ recipe1.cover_image.attach(io:recipe1_img2, filename: 'recipe2.jpg', content_typ
 recipe1.save
 puts "."
 
-recipe2 = Recipe.new( title: 'Gravlax')
-recipe2_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621434173/Seeds/Capture_d_e%CC%81cran_2021-05-19_a%CC%80_16.22.37_lxvbu5.png')
+recipe2 = Recipe.new( title: "Le gravlax : saumon mariné à l'anis")
+recipe2_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1620920870/Seeds/recette_just_fish_gravlax_hgmugg.jpg')
 recipe2.image.attach(io:recipe2_img, filename: 'recipe2.jpg', content_type: 'images.jpg')
 recipe2_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621434173/Seeds/Capture_d_e%CC%81cran_2021-05-19_a%CC%80_16.22.37_lxvbu5.png')
 recipe2.cover_image.attach(io:recipe2_img, filename: 'recipe2.jpg', content_type: 'images.jpg')
@@ -141,7 +162,7 @@ Textbox.create!(name:"contact", content: '14 bis, Route nationale
   06 79 29 81 23  addresse@mail.fr')
 Textbox.create!(name:"horaires", content: 'du mardi au jeudi, de 14h à 17h')
 Textbox.create!(name: "livraison", content: '[a modifier] Nous pouvons livrer à 20km pour les commandes à partir de 50€, à 50km pour les commandes à partir de 100€')
-Textbox.create!(name: "selection-semaine", content: '[a modifier] Nous choisissons pour vous des produits frais, voici la selction de cette semaine ')
+Textbox.create!(name: "selection-semaine", content: '[a modifier] Nous choisissons pour vous des produits frais, voici la selection de cette semaine ')
 
 Textbox.create!(name:"qui-sommes-nous-accueil", content: "Il y a 4 ans, nous avons embarqué pour l'aventure Just Fish ! Ayant grandi au sein d'une famille de Grossistes en Produits de la Mer, nous souhaitions amener ces produits auprès des particuliers.
   Just Fish, c'est du poisson frais, de qualité et au détail ! Nous vous proposons chaque semaine une sélection variée au fil des saisons et nous y ajoutons volontiers des conseils pour une cuisine simple et saine. 
@@ -149,10 +170,8 @@ Textbox.create!(name:"qui-sommes-nous-accueil", content: "Il y a 4 ans, nous avo
   Notre Magasin se situe à Wargnies-le-Grand, à proximité de la voie rapide Valenciennes / Maubeuge. Vous y trouverez poissons en filets, dos, joues, ou pavés, poissons entiers, coquillages et crustacés, ainsi que des conserves artisanales et une sélection de vins.")
   puts "."
   
-Textbox.create!(name: "courte-presentation-accueil", content: '[a modifier] Just fish est une poissonnerie située à Wargnies-le-Grand,
-    près de Valenciennes, dans le Nord
-    Produits frais, circuit court
-    ou encore écologie et qualité des produits.')
+Textbox.create!(name: "courte-presentation-accueil", content: "Just fish est une poissonnerie située à Wargnies-le-Grand,
+    près de Valenciennes, dans le Nord. Nous privilégions les circuits courts, l'excellence et la fraîcheur de nos produits")
     
 Textbox.create!(name: "poissons-frais", content: 'Entiers, en filets, en dos, en joues, en pavés')
 Textbox.create!(name: "huitres", content: "Gillardeau, Marennes-Oléron, PRAT Ar Coum de Bretagne, Parcs de l imperatrice Bassin d'Arcachon")
