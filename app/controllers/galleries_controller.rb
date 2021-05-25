@@ -1,5 +1,9 @@
 class GalleriesController < ApplicationController
 
+  def index
+    @galleries = Gallery.all
+  end
+
   def edit
     @gallery = Gallery.find(params[:id])
   end
@@ -13,7 +17,7 @@ class GalleriesController < ApplicationController
       flash.alert = "Impossible de mettre à jour la gallerie sans avoir selectionné d'images"
     else
       @gallery.images.attach(gallery_params[:images])
-      redirect_to edit_gallery_path(@gallery)
+      redirect_to galleries_path 
     end
   end
 
@@ -30,7 +34,7 @@ class GalleriesController < ApplicationController
       set_default_image
       flash.alert = "Vous avez supprimé la dernière image, nous en avons rajouté une par défaut"
     end
-    redirect_to edit_gallery_path(@gallery)
+    redirect_to galleries_path
   end
 
   private

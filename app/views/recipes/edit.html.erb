@@ -1,22 +1,50 @@
-<h1>Recipe#edit</h1>
-<p>Find me in app/views/recipe/edit.html.erb</p>
 
-<h1>Recipes#edit</h1>
 
 <% if user_signed_in? %>
   <% if current_user.admin  %>
-      <h1>Choisir une nouvelle image pour la recette</h1>
-      <p><%= @recipe.title %></p>
-        <% if @recipe.image.attached? %>
-          <%= cl_image_tag @recipe.image.key, width: 200, height: 200 %>
-        <% else %>
-          <p>Il n'y a pas d'image pour cette recette</p>
-        <% end %>
-        <%= simple_form_for(@recipe) do |f| %>
-          <%= f.file_field :image %>
-          <%= f.submit%>
+  <div class="dashboard-container">
+    <%= render 'shared/admin_dashboard_nav' %>
+    <div class="dashboard-side">
+
+
+      <h1>Modifier une recette</h1>
+
+
+
+
+
+
+
+
+      <% if @recipe.image.attached? %>
+        <%= cl_image_tag @recipe.image.key, width: 200, height: 200 %>
+      <% else %>
+        <p>Il n'y a pas d'image pour cet recipe</p>
+      <% end %>
+      <h3><%= @recipe.title %> </h3>
+        <%= simple_form_for(@recipe) do |f|%>
+
+          <%= f.label 'Titre'%>
+          <%= f.input :title, label: false %> <br>
+          <%= f.label 'Recette en image'%> <br>
+          <%= f.file_field :image  %> <br> <br>
+          <%= f.label "Image pour la page d'accueil"%> <br>
+          <%= f.file_field :cover_image %> <br> <br>
+          <%= f.submit "Mettre à jour la recette"%>
         <% end %>
   <% end %>
 
   <%= link_to 'Supprimer cette recette', recipe_path(@recipe), method: :delete, data: { confirm: "Vous êtes sur le point de supprimer cette recette. Etes vous sur ?" } %>
-<% end %>
+
+
+
+
+
+    </div>
+  </div>
+  <% else %>
+    <p>Vous ne pouvez pas accéder à cette page</p>
+    <%= link_to 'Accueil', root_path%>
+
+  <% end %>
+

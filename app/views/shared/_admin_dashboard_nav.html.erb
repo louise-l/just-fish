@@ -1,0 +1,27 @@
+<div class="admin-dashboard-nav">
+
+  <p class='<%= 'active'if current_page?(new_article_path) %>' >
+    <%= link_to "Ajouter un article", new_article_path, class: "" %>
+  </p>
+
+  <p class='<%= 'active'if current_page?(articles_path) %>' >
+    <%= link_to "Gerer les articles", articles_path, class: "" %>
+  </p>
+
+  <p class='<%= 'active'if current_page?(new_recipe_path) %>' >
+    <%= link_to "Ajouter une recette", new_recipe_path, class: "" %>
+  </p>
+
+  <p class='<%= 'active'if current_page?(recipes_path) %>' >
+    <%= link_to "Gérer les recettes", recipes_path, class: "" %>
+  </p>
+
+  <p class='<%= 'active'if current_page?(galleries_path) %>' >
+    <%= link_to "Gérer les images", galleries_path, class: "" %>
+  </p>
+
+  <p class='<%= 'active'if current_page?(textboxes_path) %>' >
+    <%= link_to "Gérer les textes", textboxes_path, class: "" %>
+  </p>
+
+</div>

@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2021_05_19_144842) do
     t.string "title"
   end
 
-  create_table "texts", force: :cascade do |t|
+  create_table "textboxes", force: :cascade do |t|
     t.string "name"
     t.text "content"
     t.datetime "created_at", precision: 6, null: false

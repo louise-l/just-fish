@@ -1,4 +1,53 @@
-<div class="container index-articles">
+
+
+
+<%# PAGE POUR LES ADMIN %>
+
+<% if user_signed_in? %>
+  <% if current_user.admin  %>
+  <div class="dashboard-container">
+    <%= render 'shared/admin_dashboard_nav' %>
+    <div class="dashboard-side">
+
+
+
+     <h1>Modifier les articles</h1>
+
+    <% @articles.each do |article| %>
+    <%= link_to edit_article_path(article) do  %>
+      <p>    <%= article.title %> </p>
+
+    <% end %>
+    <% end %>
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <% end %>
+  <% else %>
+  
+  <%# PAGE POUR LES UTILISATEURS %>
+
+  <div class="container index-articles">
 
   <h1>Nos articles</h1>
 
@@ -16,3 +65,5 @@
     <% end %>
   </div>
 </div>
+
+<% end %>

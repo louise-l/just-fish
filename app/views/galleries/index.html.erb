@@ -1,0 +1,42 @@
+
+<% if user_signed_in? %>
+  <% if current_user.admin  %>
+  <div class="dashboard-container">
+    <%= render 'shared/admin_dashboard_nav' %>
+    <div class="dashboard-side">
+
+    <h1>Toutes les images</h1>
+    <p>C'est mieux de d'abord ajouter ton image, et ensuite d'enlever l'ancienne. </p>
+
+    <% @galleries.each do |gallery| %>
+    <div class="dashboard-gallery-card">
+      <h3> <%= gallery.description %></h3>
+      
+      <% gallery.images.each do |image| %>
+            <div class="image-card-gallery">
+              <%= cl_image_tag image.key, class: 'gallery-image-preview' %>
+              <%= link_to 'Supprimer cette image', delete_image_attachement_gallery_url(gallery, image), method: :delete, data: { confirm: "Vous êtes sur le point de supprimer cette image. Etes vous sur ?" } %>
+            </div>
+      <% end %>
+
+      <div> Ajouter une image </div>
+
+      <%= simple_form_for(gallery) do |f| %>
+        <%= f.file_field :images, multiple: true %>
+        <%= f.submit "Confirmer l'ajout de l'image" %>
+      <% end %>
+    </div>
+    <% end %>
+
+    
+     
+
+
+    </div>
+  </div>
+  <% else %>
+    <p>Vous ne pouvez pas accéder à cette page</p>
+    <%= link_to 'Accueil', root_path%>
+
+  <% end %>
+<% end %>

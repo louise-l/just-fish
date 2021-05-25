@@ -31,9 +31,16 @@ header{
     margin: 60px 0;
     border-radius: 10px;
   }
+
+  .main-presentation-homepage{
+    font-size: 18px;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+  }
   .homepage-article{
     display: grid;
     grid-template-columns: 40% 60%;
+    margin: 20px auto;
     img{
       height: 200px;
       width: 100%;
