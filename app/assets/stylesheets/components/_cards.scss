@@ -66,6 +66,40 @@ display: flex;
   }
 }
 
+.card-product-category{
+  width: 250px;
+  background-color: $light-bg;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 10px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  div{
+    //width: 100%;
+    margin: 0 auto;
+  }
+  p{
+    padding-bottom: 20px;
+  }
+  .detail-order{
+    background-color: rgba($secondary-blue, 0.5);
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 40%;
+  }
+
+}
+
 @media (max-width:600px) {
   .card-product{
     margin: 20px auto;

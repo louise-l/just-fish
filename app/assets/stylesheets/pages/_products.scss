@@ -1,0 +1,20 @@
+.product-category{
+  margin-top: 40px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.title-products{
+  padding: 50px;
+}
+
+
+@media (max-width:600px){
+  .product-category{
+    display: block;
+  }
+
+  .title-products{
+    padding: 30px;
+  }
+}
