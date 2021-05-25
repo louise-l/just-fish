@@ -5,7 +5,10 @@ class PagesController < ApplicationController
     @home_image = Gallery.find_by(name: "homepage").images.last.key
     @articles = Article.where(visible: true)
     @recipe = Recipe.last
-    @about_text = Text.find_by(name: 'qui-sommes-nous')
+    @presentation_short = Textbox.find_by(name: 'courte-presentation-accueil')
+    @weekly_products_txt = Textbox.find_by(name: 'selection-semaine')
+    @about_text = Textbox.find_by(name: 'qui-sommes-nous-accueil')
+  
     @home_image_about = Gallery.find_by(name: "homepage-about").images.last.key
   end
 
@@ -25,21 +28,21 @@ class PagesController < ApplicationController
     @epicerie = Gallery.find_by(name: "epicerie").images.last.key
     @alcools = Gallery.find_by(name: "alcools").images.last.key
 
-    @poissons_frais_txt = Text.find_by(name: 'poissons-frais')
-    @huitres_txt = Text.find_by(name: 'huitres')
-    @coquillages_txt = Text.find_by(name: 'coquillages-crustaces')
-    @poissons_fumes_txt = Text.find_by(name: 'poissons-fumes')
-    @produits_conditionnes_txt = Text.find_by(name: 'produits-conditionnes')
-    @produits_surgeles_txt = Text.find_by(name: 'produits-surgeles')
-    @epicerie_txt = Text.find_by(name: 'epicerie')
-    @alcools_txt = Text.find_by(name: 'alcools')
+    @poissons_frais_txt = Textbox.find_by(name: 'poissons-frais')
+    @huitres_txt = Textbox.find_by(name: 'huitres')
+    @coquillages_txt = Textbox.find_by(name: 'coquillages-crustaces')
+    @poissons_fumes_txt = Textbox.find_by(name: 'poissons-fumes')
+    @produits_conditionnes_txt = Textbox.find_by(name: 'produits-conditionnes')
+    @produits_surgeles_txt = Textbox.find_by(name: 'produits-surgeles')
+    @epicerie_txt = Textbox.find_by(name: 'epicerie')
+    @alcools_txt = Textbox.find_by(name: 'alcools')
 
 
   end
 
   def about
-    @horaires = Text.find_by(name: 'horaires')
-    @livraisons = Text.find_by(name: 'livraison')
+    @horaires = Textbox.find_by(name: 'horaires')
+    @livraisons = Textbox.find_by(name: 'livraison')
     @picture_about = Gallery.find_by(name: "about").images.last.key
   end
 end

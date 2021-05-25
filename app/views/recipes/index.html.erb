@@ -1,5 +1,53 @@
 
-<div class="container index-articles">
+
+
+
+<%# PAGE POUR LES ADMIN %>
+
+<% if user_signed_in? %>
+  <% if current_user.admin  %>
+  <div class="dashboard-container">
+    <%= render 'shared/admin_dashboard_nav' %>
+    <div class="dashboard-side">
+
+
+
+     <h1>Modifier les recettes</h1>
+
+    <% @recipes.each do |recipe| %>
+      <%= link_to edit_recipe_path(recipe) do  %>
+        <p>    <%= recipe.title %> </p>
+
+      <% end %>
+    <% end %>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <% end %>
+  <% else %>
+  
+  <%# PAGE POUR LES UTILISATEURS %>
+
+  <div class="container index-articles">
+
+
+
 
   <h1>Nos recettes</h1>
 
@@ -17,3 +65,12 @@
     <% end %>
   </div>
 </div>
+
+
+
+
+
+
+
+
+<% end %>

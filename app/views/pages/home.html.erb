@@ -9,21 +9,18 @@
 
 
 <div class="container homepage">
-  <p>Just fish est une <strong>poissonnerie</strong>  située à Wargnies-le-Grand, <br>
-    près de Valenciennes, dans le Nord <br>
-    Produits frais, circuit court <br>
-    ou encore écologie et qualité des produits.</p>
+    <div class =  'main-presentation-homepage'><%= markdown(@presentation_short.content) %></div>
 
-  <section class="homepage-article">
-    <% @articles.each do |article| %>
+  <% @articles.each do |article| %>
+    <section class="homepage-article">
       <%= cl_image_tag article.image.key%>
       <div>
         <h2><%= article.title %></h2>
         <p><%= article.small_description %></p>
         <%= link_to "Lire l'article", root_path, class: 'button cta'%>
       </div>
-    <% end %>
-  </section>
+    </section>
+  <% end %>
 
   <section class="homepage-recipe">
     <div>
@@ -35,6 +32,7 @@
 
   <div class="weekly-products-presentation">
     <h2 class = 'cursive'>La selection de la semaine</h2>
+    <p><%= markdown(@weekly_products_txt.content) %></p>
     <div id="weekly-products"></div>
     <%# L'affichage des produits en grand est dans la navbar. %>
     <%= link_to "Comment passer commande ?", root_path, class: 'button cta-strong'%>
@@ -45,7 +43,7 @@
   <div class="who-are-we">
     <h2>Qui sommes-nous ?</h2>
     <div class = 'who-are-we-description'>
-      <%# <p><%= markdown(@about_text.content) %>
+      <%= markdown(@about_text.content) %>
 
       <%= cl_image_tag @home_image_about, class: ''%>
     </div>

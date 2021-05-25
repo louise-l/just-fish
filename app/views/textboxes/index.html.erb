@@ -1,13 +1,27 @@
 
-
-
 <% if user_signed_in? %>
   <% if current_user.admin  %>
   <div class="dashboard-container">
     <%= render 'shared/admin_dashboard_nav' %>
     <div class="dashboard-side">
-      <h1>Dashboard</h1>
-      <h3>Bienvenue sur le dashboard, d'ici vous pourrez gérer votre site</h3>
+
+
+
+     <h1>Modifier les textes</h1>
+
+    <% @texts.each do |text| %>
+      <h3>    <%= text.name %> </h3>
+      <%= simple_form_for(text) do |f| %>
+        <%= f.input :content, label: false %>
+        <%= f.submit 'Valider la modification' %>
+      <% end %>
+
+    <% end %>
+
+
+
+
+
     </div>
   </div>
   <% else %>

@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   
   resources :articles
   resources :recipes
-  resources :galleries, only: [:edit, :update] do 
+  resources :textboxes, only: [:index, :edit, :update]
+  resources :galleries, only: [:index, :edit, :update] do 
     member do
       delete :delete_image_attachement
     end

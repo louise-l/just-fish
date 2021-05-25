@@ -1,12 +1,47 @@
 
 <% if user_signed_in? %>
   <% if current_user.admin  %>
+  <div class="dashboard-container">
+    <%= render 'shared/admin_dashboard_nav' %>
+    <div class="dashboard-side">
+
+
       <h1>Nouvel article</h1>
+
+      <p>Il est possible de mettre le texte en forme : </p>
+      <div>##Titre</div>
+      <div>###Sous-titre</div>
+      <div>*mots importants*</div>
+      <div>**mots très importants**</div>
+      <div>tirer un trait : ----- </div>
+      <p>Pour en savoir plus sur le
+        <%= link_to 'markdown', 'https://www.christopheducamp.com/2014/09/18/love-markdown/', style: 'text-decoration: underline', target: '_blank'%>
+      </p>
+
+
+
         <%= simple_form_for(@article) do |f| %>
-          <%= f.input :title %>
-          <%= f.input :content %>
-          <%= f.file_field :image %>
-          <%= f.submit%>
+
+          <%= f.label  'Titre'%>
+          <%= f.input :title, label: false%>
+          <%= f.label  "Résumé - pour la page d'accueil"%>
+          <%= f.input :small_description, label: false%>
+          <%= f.label  'Contenu'%>
+          <%= f.input :content, label: false, class: "dashboard-new-article-field" %>
+          <%= f.label  'Photo'%>
+          <%= f.file_field :image, label: false %>
+          <%= f.input :visible, label: "Mettre en page d'accueil" %>
+
+          <%= f.submit "Ajouter l'article"%>
         <% end %>
+
+
+
+    </div>
+  </div>
+  <% else %>
+    <p>Vous ne pouvez pas accéder à cette page</p>
+    <%= link_to 'Accueil', root_path%>
+
   <% end %>
 <% end %>

@@ -15,7 +15,7 @@ Recipe.destroy_all
 puts "."
 Gallery.destroy_all
 puts "."
-Text.destroy_all
+Textbox.destroy_all
 puts "."
 
 puts "-------------------------------"
@@ -134,28 +134,31 @@ puts "."
 
 puts "."
 
-puts "Creating texts"
-Text.create!(name:"horaires", content: 'du mardi au jeudi, de 14h à 17h')
+puts "Creating text boxes"
 puts "."
+Textbox.create!(name:"contact", content: '14 bis, Route nationale
+  59144 Wargnies-le-Grand
+  06 79 29 81 23  addresse@mail.fr')
+Textbox.create!(name:"horaires", content: 'du mardi au jeudi, de 14h à 17h')
+Textbox.create!(name: "livraison", content: '[a modifier] Nous pouvons livrer à 20km pour les commandes à partir de 50€, à 50km pour les commandes à partir de 100€')
+Textbox.create!(name: "selection-semaine", content: '[a modifier] Nous choisissons pour vous des produits frais, voici la selction de cette semaine ')
 
-Text.create!(name:"qui-sommes-nous-accueil", content: "Il y a 4 ans, nous avons embarqué pour l'aventure Just Fish ! Ayant grandi au sein d'une famille de Grossistes en Produits de la Mer, nous souhaitions amener ces produits auprès des particuliers.
+Textbox.create!(name:"qui-sommes-nous-accueil", content: "Il y a 4 ans, nous avons embarqué pour l'aventure Just Fish ! Ayant grandi au sein d'une famille de Grossistes en Produits de la Mer, nous souhaitions amener ces produits auprès des particuliers.
   Just Fish, c'est du poisson frais, de qualité et au détail ! Nous vous proposons chaque semaine une sélection variée au fil des saisons et nous y ajoutons volontiers des conseils pour une cuisine simple et saine. 
   Just Fish, c'est la Mer près de chez Vous : Nous garantissons la fraîcheur et la qualité grâce à des arrivages quotidiens et des filières réputées.
   Notre Magasin se situe à Wargnies-le-Grand, à proximité de la voie rapide Valenciennes / Maubeuge. Vous y trouverez poissons en filets, dos, joues, ou pavés, poissons entiers, coquillages et crustacés, ainsi que des conserves artisanales et une sélection de vins.")
-puts "."
-
-Text.create!(name: "presentation-accueil", content: '[a modifier] Just fish est une poissonnerie située à Wargnies-le-Grand,
-  près de Valenciennes, dans le Nord
-  Produits frais, circuit court
-  ou encore écologie et qualité des produits.')
-Text.create!(name: "selection-semaine", content: '[a modifier] Nous choisissons pour vous des produits frais, voici la selction de cette semaine ')
-Text.create!(name: "livraison", content: '[a modifier] Nous pouvons livrer à 20km pour les commandes à partir de 50€, à 50km pour les commandes à partir de 100€')
-
-Text.create!(name: "poissons-frais", content: 'Entiers, en filets, en dos, en joues, en pavés')
-Text.create!(name: "huitres", content: "Gillardeau, Marennes-Oléron, PRAT Ar Coum de Bretagne, Parcs de l imperatrice Bassin d'Arcachon")
-Text.create!(name: "coquillages-crustaces", content: 'Vivants et cuits : moules, saint-jacques, coques, palourdes, crevettes, langoustines, tourteaux')
-Text.create!(name: "poissons-fumes", content: 'Saumon, flétan, haddock...')
-Text.create!(name: "produits-conditionnes", content: 'Œufs de poisson, anchois marinés, chair de crabe, ...')
-Text.create!(name: "produits-surgeles", content: 'gambas, cocktail de fruits de mer, cuisses de grenouille')
-Text.create!(name: "epicerie", content: 'Conserverie : algoplus roscoff et jean de luz , rillettes , soupes, sardines, thon, salicorne, SEL de Guérande')
-Text.create!(name: "alcools", content: ' Vins, champagne, bière artisanale')
+  puts "."
+  
+Textbox.create!(name: "courte-presentation-accueil", content: '[a modifier] Just fish est une poissonnerie située à Wargnies-le-Grand,
+    près de Valenciennes, dans le Nord
+    Produits frais, circuit court
+    ou encore écologie et qualité des produits.')
+    
+Textbox.create!(name: "poissons-frais", content: 'Entiers, en filets, en dos, en joues, en pavés')
+Textbox.create!(name: "huitres", content: "Gillardeau, Marennes-Oléron, PRAT Ar Coum de Bretagne, Parcs de l imperatrice Bassin d'Arcachon")
+Textbox.create!(name: "coquillages-crustaces", content: 'Vivants et cuits : moules, saint-jacques, coques, palourdes, crevettes, langoustines, tourteaux')
+Textbox.create!(name: "poissons-fumes", content: 'Saumon, flétan, haddock...')
+Textbox.create!(name: "produits-conditionnes", content: 'Œufs de poisson, anchois marinés, chair de crabe, ...')
+Textbox.create!(name: "produits-surgeles", content: 'gambas, cocktail de fruits de mer, cuisses de grenouille')
+Textbox.create!(name: "epicerie", content: 'Conserverie : algoplus roscoff et jean de luz , rillettes , soupes, sardines, thon, salicorne, SEL de Guérande')
+Textbox.create!(name: "alcools", content: ' Vins, champagne, bière artisanale')
