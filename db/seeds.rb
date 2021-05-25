@@ -77,6 +77,12 @@ gallery2.images.attach(io:gallery2_img, filename: 'gallery2.jpg', content_type: 
 gallery2.save
 puts "."
 
+gallery3 = Gallery.new( name: 'about', description: "Photo de la page informations pratiques")
+gallery3_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621933296/Seeds/ANNE_J-F_ppjvgc.jpg')
+gallery3.images.attach(io:gallery3_img, filename: 'gallery3.jpg', content_type: 'images.jpg')
+gallery3.save
+puts "."
+
 
 puts "."
 
@@ -84,8 +90,16 @@ puts "Creating texts"
 Text.create!(name:"horaires", content: 'du mardi au jeudi, de 14h à 17h')
 puts "."
 
-Text.create!(name:"qui-sommes-nous", content: "Il y a 4 ans, nous avons embarqué pour l'aventure Just Fish ! Ayant grandi au sein d'une famille de Grossistes en Produits de la Mer, nous souhaitions amener ces produits auprès des particuliers.
+Text.create!(name:"qui-sommes-nous-accueil", content: "Il y a 4 ans, nous avons embarqué pour l'aventure Just Fish ! Ayant grandi au sein d'une famille de Grossistes en Produits de la Mer, nous souhaitions amener ces produits auprès des particuliers.
   Just Fish, c'est du poisson frais, de qualité et au détail ! Nous vous proposons chaque semaine une sélection variée au fil des saisons et nous y ajoutons volontiers des conseils pour une cuisine simple et saine. 
   Just Fish, c'est la Mer près de chez Vous : Nous garantissons la fraîcheur et la qualité grâce à des arrivages quotidiens et des filières réputées.
   Notre Magasin se situe à Wargnies-le-Grand, à proximité de la voie rapide Valenciennes / Maubeuge. Vous y trouverez poissons en filets, dos, joues, ou pavés, poissons entiers, coquillages et crustacés, ainsi que des conserves artisanales et une sélection de vins.")
 puts "."
+
+Text.create!(name: "presentation-accueil", content: '[a modifier] Just fish est une poissonnerie située à Wargnies-le-Grand,
+  près de Valenciennes, dans le Nord
+  Produits frais, circuit court
+  ou encore écologie et qualité des produits.')
+Text.create!(name: "selection-semaine", content: '[a modifier] Nous choisissons pour vous des produits frais, voici la selction de cette semaine ')
+Text.create!(name: "livraison", content: '[a modifier] Nous pouvons livrer à 20km pour les commandes à partir de 50€, à 50km pour les commandes à partir de 100€')
+Text.create!(name: "horaires", content: '[a modifier] Du mardi au vendredi, de 10h à 15h')

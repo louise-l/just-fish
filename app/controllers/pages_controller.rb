@@ -14,4 +14,10 @@ class PagesController < ApplicationController
     @articles = Article.all
     @galleries = Gallery.all
   end
+
+  def about
+    @horaires = Text.find_by(name: 'horaires')
+    @livraisons = Text.find_by(name: 'livraison')
+    @picture_about = Gallery.find_by(name: "about").images.last.key
+  end
 end
