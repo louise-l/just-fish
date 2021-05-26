@@ -57,8 +57,8 @@
     <% @recipes.each do |recipe| %>
     <div class="index-articles-card">
     <%= link_to recipe_path(recipe), class: '' do %>
-      <% if recipe.image.attached? %>
-        <%= cl_image_tag recipe.image.key, class: 'recipe-image'%>
+      <% if recipe.cover_image.attached? %>
+        <%= cl_image_tag recipe.cover_image.key, class: 'recipe-image'%>
       <% end %>
       <h3><%= recipe.title %></h3>
       <%= link_to "Voir", recipe_path(recipe), class: 'small-btn'%>
