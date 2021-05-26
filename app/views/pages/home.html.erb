@@ -1,6 +1,6 @@
-<header>
+<header >
   <%= cl_image_tag @home_image, class: 'homepage-main-picture'%>
-  <div class="homepage-logo">
+  <div class="homepage-logo" data-aos="fade-up">
     <h1>POISSONNERIE</h1>
     <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621610775/Seeds/Logo-removebg-preview_semzxt.png", class: ''%>
     <p>La mer près de chez vous</p>
@@ -12,7 +12,7 @@
     <div class =  'main-presentation-homepage'><%= markdown(@presentation_short.content) %></div>
 
   <% @articles.each do |article| %>
-    <section class="homepage-article">
+    <section class="homepage-article" data-aos="fade-right">
       <%= cl_image_tag article.image.key%>
       <div>
         <h2><%= article.title %></h2>
@@ -22,7 +22,7 @@
     </section>
   <% end %>
 
-  <section class="homepage-recipe">
+  <section class="homepage-recipe" data-aos="fade-left">
     <div>
       <h2><%= @recipe.title %></h2> 
       <%= link_to "Lire la recette de la semaine", recipe_path(@recipe), class: 'button cta-strong'%>
@@ -33,14 +33,14 @@
   <div class="weekly-products-presentation">
     <h2 class = 'cursive'>La selection de la semaine</h2>
     <p><%= markdown(@weekly_products_txt.content) %></p>
-    <div id="weekly-products"></div>
+    <div id="weekly-products" data-aos="fade-up"></div>
     <%# L'affichage des produits en grand est dans la navbar. %>
     <%= link_to "Comment passer commande ?", root_path, class: 'button cta-strong'%>
   </div>
 
     <%= render 'shared/order' %>
 
-  <div class="who-are-we">
+  <div class="who-are-we" data-aos="fade-right">
     <h2>Qui sommes-nous ?</h2>
     <div class = 'who-are-we-description'>
       <%= markdown(@about_text.content) %>

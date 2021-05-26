@@ -1,4 +1,4 @@
-<div class="container show-article">
+<div class="container show-article" data-aos="fade-up">
   <% if @article.image.attached? %>
     <%= cl_image_tag @article.image.key, class: 'article-image'%>
   <% end %>
