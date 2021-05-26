@@ -20,7 +20,13 @@ header{
     border-radius: 40%;
     box-shadow: 0 0 150px white;
     img{max-width: 75vw;}
-
+    h1{
+      font-family: $header-font;
+      color: grey;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+    
   }
 }
 
@@ -30,6 +36,9 @@ header{
     padding: 20px;
     margin: 60px 0;
     border-radius: 10px;
+    h2{
+      font-size: 24px;
+    }
   }
 
   .main-presentation-homepage{
@@ -45,11 +54,15 @@ header{
       height: 200px;
       width: 100%;
       object-fit: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     div{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding: 20px;
     }
   }
   .homepage-recipe{

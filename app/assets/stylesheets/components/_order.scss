@@ -60,6 +60,11 @@
   }
   .order-casamiam{
     display: block;
+    .casamiam-explanation{
+      p{
+        width: 80%;
+      }
+    }
     .mobile{
       display: none;
     }

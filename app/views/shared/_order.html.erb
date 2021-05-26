@@ -27,8 +27,12 @@
       <h2>Casamiam</h2>
       <p>Casamiam est une application. C’est ici que vous pouvez commander nos bons produits. <br> Rendez-vous dans notre boutique Just Fish Poissonnerie</p>
       <div>
-        <%= cl_image_tag 'https://res.cloudinary.com/debeemobv/image/upload/v1621602128/Seeds/app-store_tqbrsm.png', class: 'app-logo'%>
-        <%= cl_image_tag 'https://res.cloudinary.com/debeemobv/image/upload/v1621602117/Seeds/bouton-google_put4e0.png', class: 'app-logo'%>
+        <%= link_to 'https://play.google.com/store/apps/details?id=com.casamiam.app', target: :_blank do  %>
+          <%= cl_image_tag 'https://res.cloudinary.com/debeemobv/image/upload/v1621602117/Seeds/bouton-google_put4e0.png', class: 'app-logo'%>
+        <% end %>
+        <%= link_to 'https://apps.apple.com/fr/app/casamiam/id1544082592?ign-itsct=apps_box&ign-itscg=30200', target: :_blank do  %>
+          <%= cl_image_tag 'https://res.cloudinary.com/debeemobv/image/upload/v1621602128/Seeds/app-store_tqbrsm.png', class: 'app-logo'%>
+        <% end %>
       </div>
     </div>
 

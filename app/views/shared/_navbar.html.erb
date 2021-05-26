@@ -1,5 +1,7 @@
 <div class="navbar">
-    <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621610775/Seeds/Logo-removebg-preview_semzxt.png"%>
+    <%= link_to root_path do %>
+      <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621610775/Seeds/Logo-removebg-preview_semzxt.png"%>
+    <% end %>
     <nav class = desktop>
       <%= link_to "Accueil", root_path, class: current_page?(root_path) ? 'active' : ''%>
       <%= link_to "Selection de la semaine", root_path, class: ''%>
