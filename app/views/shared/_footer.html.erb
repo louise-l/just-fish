@@ -3,12 +3,17 @@
     <h3>Just Fish Poissonnerie</h3>
     <div class = "global-infos">
       <section class="location">
+        <h4>Adresse</h4>
         <p><%= markdown(Textbox.find_by(name:"contact").content) %></p>
+        <%= link_to "Ouvrir dans Google Maps", "https://goo.gl/maps/eSEcWVnXH3gtq4fZ8", class: 'very-small-btn', target: :_blank%>
       </section>
 
       <section class="horaires">
+        <h4>Horaires</h4>
         <p> <%= markdown(Textbox.find_by(name:"horaires").content) %></p>
       </section>
+      <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621610775/Seeds/Logo-removebg-preview_semzxt.png"%>
+
 
     </div>
   </div>

@@ -13,7 +13,9 @@
 
   <% @articles.each do |article| %>
     <section class="homepage-article" data-aos="fade-right">
+      <% if article.image.attached? %>
       <%= cl_image_tag article.image.key%>
+      <% end %>
       <div>
         <h2><%= article.title %></h2>
         <p><%= article.small_description %></p>
@@ -27,7 +29,11 @@
       <h2><%= @recipe.title %></h2> 
       <%= link_to "Lire la recette de la semaine", recipe_path(@recipe), class: 'button cta-strong'%>
     </div>
+    <% if @recipe.cover_image.attached? %>
     <%= cl_image_tag @recipe.cover_image.key%>
+    <% else %>
+    <p>Il faut rajouter une image de page d'accueil <br> ¯\_(ツ)_/¯</p>
+    <% end %>
   <div id= "weekly-products-anchor"></div>
   </section>
 

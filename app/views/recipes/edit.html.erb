@@ -19,7 +19,7 @@
       <% if @recipe.image.attached? %>
         <%= cl_image_tag @recipe.image.key, width: 200, height: 200 %>
       <% else %>
-        <p>Il n'y a pas d'image pour cet recipe</p>
+        <p>Il n'y a pas d'image pour cette recette</p>
       <% end %>
       <h3><%= @recipe.title %> </h3>
         <%= simple_form_for(@recipe) do |f|%>
@@ -33,8 +33,10 @@
           <%= f.submit "Mettre à jour la recette"%>
         <% end %>
   <% end %>
+    <br><br><br>
 
-  <%= link_to 'Supprimer cette recette', recipe_path(@recipe), method: :delete, data: { confirm: "Vous êtes sur le point de supprimer cette recette. Etes vous sur ?" } %>
+
+  <%= link_to 'Supprimer cette recette', recipe_path(@recipe), class: "destroy-session", method: :delete, data: { confirm: "Vous êtes sur le point de supprimer cette recette. Etes vous sur ?" } %>
 
 
 

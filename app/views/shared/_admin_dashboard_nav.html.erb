@@ -23,5 +23,10 @@
   <p class='<%= 'active'if current_page?(textboxes_path) %>' >
     <%= link_to "Gérer les textes", textboxes_path, class: "" %>
   </p>
+  
+  <%= link_to destroy_user_session_path, method: :delete do %>
+  <p class= "destroy-session">Se deconnecter</p>
+  <% end %>
+
 
 </div>
