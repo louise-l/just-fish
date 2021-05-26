@@ -28,14 +28,16 @@
       <%= link_to "Lire la recette de la semaine", recipe_path(@recipe), class: 'button cta-strong'%>
     </div>
     <%= cl_image_tag @recipe.cover_image.key%>
+  <div id= "weekly-products-anchor"></div>
   </section>
 
-  <div class="weekly-products-presentation">
+
+  <div class="weekly-products-presentation" >
     <h2 class = 'cursive'>La selection de la semaine</h2>
     <p><%= markdown(@weekly_products_txt.content) %></p>
     <div id="weekly-products" data-aos="fade-up"></div>
     <%# L'affichage des produits en grand est dans la navbar. %>
-    <%= link_to "Comment passer commande ?", root_path, class: 'button cta-strong'%>
+    <div class ='button cta-strong' id = 'how-to-order-button'>Comment passer commande ?</div>
   </div>
 
     <%= render 'shared/order' %>
