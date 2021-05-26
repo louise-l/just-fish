@@ -33,7 +33,7 @@ class RecipesController < ApplicationController
           @recipe.image.attach(image)
       end
       flash.notice = "La recette a été modifiée"
-      redirect_to dashboard_path
+      redirect_to recipes_path
     else
       flash.notice = "Il y a eu un problème ... veuillez recommencer"
       render :edit
@@ -44,13 +44,13 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find(params[:id])
     @recipe.destroy
     flash.alert = "La recette a été supprimée"
-    redirect_to dashboard_path
+    redirect_to recipes_path
   end
 
   private
 
   def recipe_params
-    params.require(:recipe).permit(:title, :image)
+    params.require(:recipe).permit(:title, :image, :cover_image)
   end
 
 end

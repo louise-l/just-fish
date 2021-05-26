@@ -28,11 +28,12 @@
           <%= f.label  'Photo'%>
           <%= f.file_field :image, label: false %>
           <%= f.input :visible, label: "Mettre en page d'accueil" %>
+          <br>
           <%= f.submit 'Sauvegarder les changements'%>
         <% end %>
   <% end %>
-
-  <%= link_to 'Supprimer cet article', article_path(@article), method: :delete, data: { confirm: "Vous êtes sur le point de supprimer cet article. Etes vous sur ?" } %>
+  <br><br><br>
+  <%= link_to 'Supprimer cet article', article_path(@article), class: "destroy-session", method: :delete, data: { confirm: "Vous êtes sur le point de supprimer cet article. Etes vous sur ?" } %>
 
 
 
