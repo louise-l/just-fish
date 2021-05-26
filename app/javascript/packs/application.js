@@ -19,6 +19,7 @@ require("../packs/components/initAOS")
 
 import { displayProducts } from './components/displayProducts'
 import { toggleMobileNavbar } from './components/toggleMobileNavbar'
+import { orderButton } from './components/orderButton'
 
 
 
@@ -26,4 +27,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call  functions here
   displayProducts();
   toggleMobileNavbar();
+  orderButton();
 });
