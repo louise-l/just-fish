@@ -21,7 +21,7 @@
 .index-articles{
   h1{
     //color:$secondary-blue;
-    padding: 50px;
+    padding-top: 50px;
   }
   .index-articles-grid{
     display: grid;
@@ -30,6 +30,7 @@
     .index-articles-card{
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       margin: 40px auto;
       img{
         width: 250px;
@@ -42,6 +43,11 @@
         width: 250px;
         margin: 0 auto;
         text-align: left;
+      }
+      .index-article-small-description{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 110px;
       }
       h3{color: $secondary-blue}
       .recipe-image{
@@ -57,6 +63,7 @@
   .index-articles{
     h1{
       padding: 20px;
+      margin: 0;
     }
     .index-articles-grid{
       display: block;

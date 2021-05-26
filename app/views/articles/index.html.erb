@@ -59,7 +59,8 @@
         <%= cl_image_tag article.image.key, class: ''%>
       <% end %>
       <h3><%= article.title %></h3>
-      <p><%= article.small_description %></p>
+      <p class = "index-article-small-description"><%= article.small_description %></p>
+      <%= link_to "Lire", article_path(article), class: 'small-btn'%>
       <% end %>
     </div>
     <% end %>

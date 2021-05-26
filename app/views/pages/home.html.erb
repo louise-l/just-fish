@@ -1,7 +1,7 @@
 <header>
   <%= cl_image_tag @home_image, class: 'homepage-main-picture'%>
   <div class="homepage-logo">
-    <h1>Poissonnerie</h1>
+    <h1>POISSONNERIE</h1>
     <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621610775/Seeds/Logo-removebg-preview_semzxt.png", class: ''%>
     <p>La mer près de chez vous</p>
   </div>
@@ -17,7 +17,7 @@
       <div>
         <h2><%= article.title %></h2>
         <p><%= article.small_description %></p>
-        <%= link_to "Lire l'article", root_path, class: 'button cta'%>
+        <%= link_to "Lire l'article", article_path(article), class: 'button cta'%>
       </div>
     </section>
   <% end %>
@@ -25,7 +25,7 @@
   <section class="homepage-recipe">
     <div>
       <h2><%= @recipe.title %></h2> 
-      <%= link_to "Voir la recette", root_path, class: 'button cta-strong'%>
+      <%= link_to "Lire la recette de la semaine", recipe_path(@recipe), class: 'button cta-strong'%>
     </div>
     <%= cl_image_tag @recipe.cover_image.key%>
   </section>

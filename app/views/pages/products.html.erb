@@ -1,9 +1,7 @@
 <div class="container">
   <h1 class = 'title-products'>Nos produits</h1>
 
-  <div>Pour les produits frais, passez commande au moins 24h en avance. </div>
-  <div> Les produits avec une durée de conservation longue peuvent être achetés directement en boutique. <br> </div>
-
+  <div class = 'products-presentation'>Pour les produits frais, passez commande au moins 24h en avance. <br> Les produits avec une durée de conservation longue peuvent être achetés directement en boutique. </div>
   <%= link_to "Voir la selection de la semaine", root_path, class: 'small-btn'%>
 
   <div class="product-category">
@@ -11,7 +9,7 @@
       <%= cl_image_tag @poissons_frais%>
       <div>
         <h3>Poissons frais</h3>
-        <p><%= @poissons_frais_txt.content %></p>
+        <p><%= markdown(@poissons_frais_txt.content) %></p>
         <p class = 'detail-order'>Selon arrivage</p>
 
       </div>
@@ -21,7 +19,7 @@
         <%= cl_image_tag @huitres%>
         <div>
           <h3>Huitres</h3>
-          <p><%= @huitres_txt.content %></p>
+          <p><%= markdown(@huitres_txt.content) %></p>
         <p class = 'detail-order'>Selon arrivage</p>
         </div>
     </article>
@@ -30,7 +28,7 @@
         <%= cl_image_tag @coquillages%>
         <div>
           <h3>Coquillages et crustacés</h3>
-          <p><%= @coquillages_txt.content %></p>
+          <p><%= markdown(@coquillages_txt.content) %></p>
           <p class = 'detail-order'>Selon arrivage</p>
         </div>
     </article>
@@ -39,7 +37,7 @@
         <%= cl_image_tag @poissons_fumes%>
         <div>
           <h3>Poissons fumés</h3>
-          <p><%= @poissons_fumes_txt.content %></p>
+          <p><%= markdown(@poissons_fumes_txt.content) %></p>
           <p class = 'detail-order'>Selon arrivage</p>
         </div>
     </article>
@@ -47,7 +45,7 @@
         <%= cl_image_tag @produits_conditionnes%>
         <div>
           <h3>Produits conditionnés</h3>
-          <p><%= @produits_conditionnes_txt.content %></p>
+          <p><%= markdown(@produits_conditionnes_txt.content) %></p>
           <p class = 'detail-order'>En boutique</p>
         </div>
     </article>
@@ -55,7 +53,7 @@
         <%= cl_image_tag @produits_surgeles%>
         <div>
           <h3>Produits surgelés</h3>
-          <p><%= @produits_surgeles_txt.content %></p>
+          <p><%= markdown(@produits_surgeles_txt.content) %></p>
           <p class = 'detail-order'>En boutique</p>
         </div>
     </article>
@@ -63,7 +61,7 @@
         <%= cl_image_tag @epicerie%>
         <div>
           <h3>Epicerie</h3>
-          <p><%= @epicerie_txt.content %></p>
+          <p><%= markdown(@epicerie_txt.content) %></p>
           <p class = 'detail-order'>En boutique</p>
         </div>
     </article>
@@ -71,7 +69,7 @@
         <%= cl_image_tag @alcools%>
         <div>
           <h3>Alcools</h3>
-          <p><%= @alcools_txt.content %></p>
+          <p><%= markdown(@alcools_txt.content) %></p>
           <p class = 'detail-order'>En boutique</p>
         </div>
     </article>
