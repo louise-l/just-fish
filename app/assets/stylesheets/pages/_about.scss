@@ -12,9 +12,7 @@
   .about-details{
     text-align: left;
   }
-  img{
-    width: 300px;
-    max-width: 70vw;
+  iframe{
     margin: 0 auto;
   }
 }
@@ -28,6 +26,9 @@
     display: block;
     .about-details{
       padding-bottom: 20px;
+    }
+    iframe{
+      width: 80vw;
     }
   }
 }
