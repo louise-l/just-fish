@@ -43,6 +43,5 @@ class PagesController < ApplicationController
   def about
     @horaires = Textbox.find_by(name: 'horaires')
     @livraisons = Textbox.find_by(name: 'livraison')
-    @picture_about = Gallery.find_by(name: "about").images.last.key
   end
 end

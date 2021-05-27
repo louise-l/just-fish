@@ -98,11 +98,6 @@ gallery2.images.attach(io:gallery2_img, filename: 'gallery2.jpg', content_type: 
 gallery2.save
 puts "."
 
-gallery3 = Gallery.new( name: 'about', description: "Photo de la page informations pratiques")
-gallery3_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621933296/Seeds/ANNE_J-F_ppjvgc.jpg')
-gallery3.images.attach(io:gallery3_img, filename: 'gallery3.jpg', content_type: 'images.jpg')
-gallery3.save
-puts "."
 
 gallery4 = Gallery.new( name: 'poissons-frais', description: "Photo de la page produits - poisson frais")
 gallery4_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621937357/Seeds/4010_Colis_semaine_poissons_blancsFD_54w400_h3weba.jpg')
