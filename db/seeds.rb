@@ -146,6 +146,12 @@ gallery11.images.attach(io:gallery11_img, filename: 'gallery11.jpg', content_typ
 gallery11.save
 puts "."
 
+gallery12 = Gallery.new( name: 'partenaires', description: "Photo de la page produits - partenaires")
+gallery12_img = URI.open('https://res.cloudinary.com/debeemobv/image/upload/v1621933296/Seeds/ANNE_J-F_ppjvgc.jpg')
+gallery12.images.attach(io:gallery12_img, filename: 'gallery12.jpg', content_type: 'images.jpg')
+gallery12.save
+puts "."
+
 
 
 puts "."
@@ -155,17 +161,17 @@ puts "."
 Textbox.create!(name:"contact", content: '14 bis, Route nationale
   59144 Wargnies-le-Grand
   06 79 29 81 23  addresse@mail.fr')
-Textbox.create!(name:"horaires", content: 'du mardi au jeudi, de 14h à 17h')
-Textbox.create!(name: "livraison", content: '[a modifier] Nous pouvons livrer à 20km pour les commandes à partir de 50€, à 50km pour les commandes à partir de 100€')
-Textbox.create!(name: "selection-semaine", content: '[a modifier] Nous choisissons pour vous des produits frais, voici la selection de cette semaine ')
+Textbox.create!(name:"horaires", content: '[a completer]du **mardi** au jeudi, de 14h à 17h')
+Textbox.create!(name: "livraison", content: '[a completer] Nous pouvons livrer à 20km pour les commandes à partir de 50€, à 50km pour les commandes à partir de 100€')
+Textbox.create!(name: "selection-semaine", content: '[a completer] Nous choisissons pour vous des produits frais, voici la selection de cette semaine ')
 
-Textbox.create!(name:"qui-sommes-nous-accueil", content: "Il y a 4 ans, nous avons embarqué pour l'aventure Just Fish ! Ayant grandi au sein d'une famille de Grossistes en Produits de la Mer, nous souhaitions amener ces produits auprès des particuliers.
+Textbox.create!(name:"qui-sommes-nous-accueil", content: "[a completer]Il y a 4 ans, nous avons embarqué pour l'aventure Just Fish ! Ayant grandi au sein d'une famille de Grossistes en Produits de la Mer, nous souhaitions amener ces produits auprès des particuliers.
   Just Fish, c'est du poisson frais, de qualité et au détail ! Nous vous proposons chaque semaine une sélection variée au fil des saisons et nous y ajoutons volontiers des conseils pour une cuisine simple et saine. 
   Just Fish, c'est la Mer près de chez Vous : Nous garantissons la fraîcheur et la qualité grâce à des arrivages quotidiens et des filières réputées.
   Notre Magasin se situe à Wargnies-le-Grand, à proximité de la voie rapide Valenciennes / Maubeuge. Vous y trouverez poissons en filets, dos, joues, ou pavés, poissons entiers, coquillages et crustacés, ainsi que des conserves artisanales et une sélection de vins.")
   puts "."
   
-Textbox.create!(name: "courte-presentation-accueil", content: "Just fish est une poissonnerie située à Wargnies-le-Grand,
+Textbox.create!(name: "courte-presentation-accueil", content: "[a completer]Just fish est une **poissonnerie** située à Wargnies-le-Grand,
     près de Valenciennes, dans le Nord. Nous privilégions les circuits courts, l'excellence et la fraîcheur de nos produits")
     
 Textbox.create!(name: "poissons-frais", content: 'Entiers, en filets, en dos, en joues, en pavés')
@@ -176,4 +182,6 @@ Textbox.create!(name: "produits-conditionnes", content: 'Œufs de poisson, ancho
 Textbox.create!(name: "produits-surgeles", content: 'gambas, cocktail de fruits de mer, cuisses de grenouille')
 Textbox.create!(name: "epicerie", content: 'Conserverie : algoplus roscoff et jean de luz , rillettes , soupes, sardines, thon, salicorne, SEL de Guérande')
 Textbox.create!(name: "alcools", content: ' Vins, champagne, bière artisanale')
-Textbox.create!(name: "mentions-legales-cgv", content: ' ###Beaucoup de mentions legales  et de CGV')
+Textbox.create!(name: "partenaires", content: '[a completer] Ferme du Louvion')
+Textbox.create!(name: "commandes-page-produits", content: "[a completer] Vous ne trouvez pas votre bonheur dans notre sélection ? Pas de problème ! Appelez nous pour en discuter, nous pouvons passer des commandes spéciales chez nos fournisseurs.")
+Textbox.create!(name: "mentions-legales-cgv", content: '###Beaucoup de mentions legales  et de CGV')

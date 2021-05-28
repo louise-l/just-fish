@@ -73,6 +73,21 @@
           <p class = 'detail-order'>En boutique</p>
         </div>
     </article>
+
+    <article class="card-product-category " data-aos="fade-up">
+        <%= cl_image_tag @partenaires%>
+        <div>
+          <h3>Partenaires</h3>
+          <p><%= markdown(@partenaires_txt.content) %></p>
+          <p class = 'detail-order'>En boutique</p>
+        </div>
+    </article>
+
+  </div>
+
+  <div class="commandes-speciales">
+    <p><%= markdown(@commandes_txt.content) %></p>
+    <%= link_to "Commandes spéciales", about_path, class: 'button cta' %>
   </div>
 
   
