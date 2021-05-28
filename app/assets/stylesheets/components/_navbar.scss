@@ -3,7 +3,7 @@
   background-image:     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(https://res.cloudinary.com/debeemobv/image/upload/v1621618041/Seeds/7BC4BB5F-2654-46D0-A806-20ACEFD9B3B4_1_105_c_ipm0he.jpg);
   background-position: center;
   background-size: cover;
-  height: 100px;
+  height: 120px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -15,19 +15,20 @@
   img{
     margin: auto;
     display: block;
-    width: 120px;
+    width: 175px;
     padding-top: 20px;
   }
   nav{
     display: flex;
     justify-content: space-around;    
     a{
+      font-size: 16px;
       transition: all 0.5s ease-in-out;
       border-bottom: 4px solid transparent;
       padding-bottom: 10px;
       width: 100%;
       text-align: center;
-      font-family: $header-font;
+      font-family: $body-font;
     }
     .active, :hover{
       border-bottom: 4px solid $primary-orange;
