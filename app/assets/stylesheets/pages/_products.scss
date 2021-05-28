@@ -12,10 +12,23 @@
   margin-bottom: 20px;
 }
 
+.commandes-speciales{
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 20px;
+  p{
+    margin-bottom: 40px;
+  }
+}
+
 
 @media (max-width:600px){
   .product-category{
     display: block;
+  }
+  .commandes-speciales{
+  width: 90%;
   }
 
   .title-products{

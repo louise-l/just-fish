@@ -16,6 +16,7 @@ const displayProducts = () => {
         });
 
         productsOfTheWeek.forEach(product => {
+          let pricePerUnit = (product.price.price *product.baseVariation.measureUnit.multiplier) / product.baseVariation.measureQuantity
           weeklyProducts.insertAdjacentHTML("beforeend", `
               <div class = 'card-product' id = ${product.uniqueId}>
                 <img src="${product.baseVariation.baseProduct.image}" alt="${product.baseVariation.baseProduct.category.name}">
@@ -24,7 +25,7 @@ const displayProducts = () => {
                   ${product.baseVariation.packaging} 
                   ${product.baseVariation.measureQuantity} 
                   ${product.baseVariation.measureUnit.symbol} env.
-                  <div class = 'price-tag'>${product.price.price} €</div>
+                  <div class = 'price-tag'>${pricePerUnit.toFixed(2)} € / ${product.baseVariation.measureUnit.metaSymbol || product.baseVariation.measureUnit.symbol } </div>
                 <div>
               </div>`)
         })
@@ -34,23 +35,23 @@ const displayProducts = () => {
         const modalBackground = document.querySelector(".modal-background")
         const body = document.getElementsByTagName("body")[0];
         
-        
+        // prixkg = (prixportion * multiplier) / qtéportion
         
         
         const displayProductHandler = (product) => {
+          let pricePerUnit = (product.price.price *product.baseVariation.measureUnit.multiplier) / product.baseVariation.measureQuantity
           
           displayPlace.innerHTML = ''
           displayPlace.insertAdjacentHTML("beforeend", `
           <div class = 'show-product'>
-          <i class="fas fa-times close-modal"></i>
-          <img src="${product.baseVariation.baseProduct.image}" alt="${product.baseVariation.baseProduct.category.name}" class= 'show-product-img'>
-          <div class = "show-product-description">
-          
-          <h3>${product.baseVariation.baseProduct.name}</h3>
-          <p>${product.baseVariation.baseProduct.description}</p>
-          <p class = 'packaging-details'>${product.baseVariation.packaging} ${product.baseVariation.measureQuantity} ${product.baseVariation.measureUnit.symbol} env.</p>
-          <div class = 'price-tag'>${product.price.price} €</div>
-          </div>
+            <i class="fas fa-times close-modal"></i>
+            <img src="${product.baseVariation.baseProduct.image}" alt="${product.baseVariation.baseProduct.category.name}" class= 'show-product-img'>
+            <div class = "show-product-description">
+              <h3>${product.baseVariation.baseProduct.name}</h3>
+              <p>${product.baseVariation.baseProduct.description}</p>
+              <p class = 'packaging-details'>${product.baseVariation.packaging} ${product.baseVariation.measureQuantity} ${product.baseVariation.measureUnit.symbol} env.</p>
+              <div class = 'price-tag'>${pricePerUnit.toFixed(2)} € / ${product.baseVariation.measureUnit.metaSymbol || product.baseVariation.measureUnit.symbol } </div>
+            </div>
           </div>`)
           const modalClose = document.querySelector(".close-modal")
           modalClose.onclick = () => {

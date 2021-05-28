@@ -28,6 +28,7 @@ class PagesController < ApplicationController
     @produits_surgeles = Gallery.find_by(name: "produits-surgeles").images.last.key
     @epicerie = Gallery.find_by(name: "epicerie").images.last.key
     @alcools = Gallery.find_by(name: "alcools").images.last.key
+    @partenaires = Gallery.find_by(name: "partenaires").images.last.key
 
     @poissons_frais_txt = Textbox.find_by(name: 'poissons-frais')
     @huitres_txt = Textbox.find_by(name: 'huitres')
@@ -37,6 +38,9 @@ class PagesController < ApplicationController
     @produits_surgeles_txt = Textbox.find_by(name: 'produits-surgeles')
     @epicerie_txt = Textbox.find_by(name: 'epicerie')
     @alcools_txt = Textbox.find_by(name: 'alcools')
+    @partenaires_txt = Textbox.find_by(name: 'partenaires')
+    @commandes_txt = Textbox.find_by(name: 'commandes-page-produits')
+
 
 
   end

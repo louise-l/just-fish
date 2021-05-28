@@ -13,7 +13,8 @@ footer{
       height: 100px;
     }
     .global-infos{
-      display: flex;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
       margin-bottom: 20px;
       section{
         margin-right:100px;
@@ -24,11 +25,10 @@ footer{
       }
     }
     .subscription-form{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 0 auto;
-      padding: 0 20px;
+      padding-right: 10px;
+      #mc_embed_signup form{
+        padding: 0px;
+      }
     }
   }
   .mentions-legales-footer{
