@@ -8,7 +8,8 @@ class PagesController < ApplicationController
     @presentation_short = Textbox.find_by(name: 'courte-presentation-accueil')
     @weekly_products_txt = Textbox.find_by(name: 'selection-semaine')
     @about_text = Textbox.find_by(name: 'qui-sommes-nous-accueil')
-  
+    @horaires_txt = Textbox.find_by(name:"horaires")
+
     @home_image_about = Gallery.find_by(name: "homepage-about").images.last.key
   end
 
@@ -43,5 +44,9 @@ class PagesController < ApplicationController
   def about
     @horaires = Textbox.find_by(name: 'horaires')
     @livraisons = Textbox.find_by(name: 'livraison')
+  end
+
+  def mentions
+    @mentions = Textbox.find_by(name: 'mentions-legales-cgv')
   end
 end

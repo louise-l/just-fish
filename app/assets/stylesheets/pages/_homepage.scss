@@ -28,6 +28,21 @@ header{
     }
     
   }
+  i{
+    position: absolute;
+    bottom: 30px;
+    left: calc(100vw - 50%);
+    font-size: 40px;
+    color: $primary-orange;
+    animation: bounce 0.7s ease infinite;
+
+  }
+  
+  @keyframes bounce{
+    from {bottom: 20px;}
+    50%  {bottom: 10px;}
+    to   {bottom: 20px;}
+  }
 }
 
 .homepage{
@@ -42,9 +57,18 @@ header{
   }
 
   .main-presentation-homepage{
-    font-size: 18px;
     margin: 0 auto 40px auto;
     max-width: 600px;
+  }
+
+  .homepage-social{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .homepage-social-horaires{
+      width: 50%;
+      margin: 0 auto;
+      text-align: left;
+    }
   }
   .homepage-article{
     display: grid;
@@ -153,7 +177,17 @@ header{
     }
   }
 
+  .desktop{
+    display: none;
+  }
+
   .homepage{
+    .homepage-social{
+      display: block;
+      .homepage-social-horaires{
+        width: 100%;
+      }
+    }
     .homepage-article{
       display: block;
     }

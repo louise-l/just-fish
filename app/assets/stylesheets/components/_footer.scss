@@ -1,27 +1,43 @@
 footer{
-  height:40vh;
-  display: flex;
-  align-items:flex-end;
-  justify-content: center;
-  background-size:cover;
-  background-position: center;
-  background-color: $light-bg;
   margin-top: 50px;
+  background-color: $light-bg;
+  padding: 24px;
 
 
   //background-image: url(https://res.cloudinary.com/debeemobv/image/upload/v1621587735/Seeds/footer_zqz60h.png);
   .container-footer{
-    margin: 24px;
-    display: inline;
-    margin-bottom: 40px;
+    width: 80vw;
+    margin: 0 auto;
+    display: block;
     img{
       height: 100px;
     }
     .global-infos{
       display: flex;
+      margin-bottom: 20px;
       section{
         margin-right:100px;
       }
+      i{
+        font-size: 24px;
+        color: $secondary-blue;
+      }
+    }
+    .subscription-form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+  .mentions-legales-footer{
+    display: flex;
+    justify-content: center;
+    a{
+      padding: 10px;
+      border-top: 1px solid $secondary-blue;
+      color: $secondary-blue;
     }
   }
 }
@@ -29,10 +45,7 @@ footer{
 
 @media (max-width:600px) {
   footer{
-    background: none;
     height: auto;
-    background-color: $light-bg;
-    img{display: none;}
     .container-footer{
       .global-infos{
         display: block;

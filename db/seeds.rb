@@ -176,3 +176,4 @@ Textbox.create!(name: "produits-conditionnes", content: 'Œufs de poisson, ancho
 Textbox.create!(name: "produits-surgeles", content: 'gambas, cocktail de fruits de mer, cuisses de grenouille')
 Textbox.create!(name: "epicerie", content: 'Conserverie : algoplus roscoff et jean de luz , rillettes , soupes, sardines, thon, salicorne, SEL de Guérande')
 Textbox.create!(name: "alcools", content: ' Vins, champagne, bière artisanale')
+Textbox.create!(name: "mentions-legales-cgv", content: ' ###Beaucoup de mentions legales  et de CGV')

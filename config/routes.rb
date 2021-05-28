@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get :dashboard, to: "pages#dashboard"
   get :about, to: "pages#about"
   get :products, to: "pages#products"
+  get :mentions, to: "pages#mentions"
   
   resources :articles
   resources :recipes

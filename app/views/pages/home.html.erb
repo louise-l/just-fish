@@ -5,11 +5,21 @@
     <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621610775/Seeds/Logo-removebg-preview_semzxt.png", class: ''%>
     <p>La mer près de chez vous</p>
   </div>
+  <i class="fas fa-arrow-down"></i>
 </header>
 
 
 <div class="container homepage">
+
+  <section class="homepage-social">
+    <div class = 'homepage-social-horaires'>
     <div class =  'main-presentation-homepage'><%= markdown(@presentation_short.content) %></div>
+      <h2>Horaires</h2>
+      <p> <%= markdown(@horaires_txt.content) %></p>
+    </div>
+  
+    <div class="fb-page desktop" data-href="https://www.facebook.com/JustFish.Poissonnerie.fr" data-tabs="timeline" data-width="400" data-height="600" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/JustFish.Poissonnerie.fr" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/JustFish.Poissonnerie.fr">Just Fish Poissonnerie</a></blockquote></div>
+  </section>
 
   <% @articles.each do |article| %>
     <section class="homepage-article" data-aos="fade-right">
@@ -23,6 +33,7 @@
       </div>
     </section>
   <% end %>
+
 
   <section class="homepage-recipe" data-aos="fade-left">
     <div>
