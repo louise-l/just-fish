@@ -48,6 +48,7 @@ class PagesController < ApplicationController
   def about
     @horaires = Textbox.find_by(name: 'horaires')
     @livraisons = Textbox.find_by(name: 'livraison')
+    @contact = Textbox.find_by(name: 'contact')
   end
 
   def mentions
