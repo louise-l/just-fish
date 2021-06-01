@@ -4,7 +4,7 @@
     <% end %>
     <nav class = desktop>
       <%= link_to "Accueil", root_path, class: current_page?(root_path) ? 'active' : ''%>
-      <%= link_to "Selection de la semaine", root_path, id: 'weelky-products-button'%>
+      <%= link_to "Selection de la semaine", root_path(anchor: "weekly-products-anchor"), class: ''%>
       <%= link_to "Nos produits", products_path, class: current_page?(products_path) ? 'active' : ''%>
       <%= link_to "Recettes", recipes_path, class: controller_name == 'recipes' ? 'active' : ''%>
       <%= link_to "Articles", articles_path, class: controller_name == 'articles' ? 'active' : ''%>
