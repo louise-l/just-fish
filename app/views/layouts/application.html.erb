@@ -2,16 +2,17 @@
 <html>
   <head>
     <title>Just Fish - Poissonnerie Valenciennes</title>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <%= favicon_link_tag 'icon-just-fish.png' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="<%= meta_description %>">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <div  id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_CA/sdk.js#xfbml=1&version=v10.0" nonce="nwDCGEhs"></script>
+      <%# /* MAILCHIMP */ %>
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css"> #mc_embed_signup{background:$light-bg; clear:left; font:14px Helvetica,Arial,sans-serif; }</style>
 
+
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>

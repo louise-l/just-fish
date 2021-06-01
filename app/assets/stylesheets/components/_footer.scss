@@ -28,6 +28,9 @@ footer{
       padding-right: 10px;
       #mc_embed_signup form{
         padding: 0px;
+        .mc-field-group{
+          min-height: auto;
+        }
       }
     }
   }
