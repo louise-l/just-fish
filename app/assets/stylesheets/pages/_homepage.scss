@@ -64,10 +64,16 @@ header{
   .homepage-social{
     display: grid;
     grid-template-columns: 50% 50%;
+    .mobile{
+      display: none;
+    }
     .homepage-social-horaires{
-      width: 50%;
+      width: 70%;
       margin: 0 auto;
       text-align: left;
+    }
+    .facebook-iframe{
+      margin: 0 auto;
     }
   }
   .homepage-article{
@@ -189,6 +195,9 @@ header{
   .homepage{
     .homepage-social{
       display: block;
+      .mobile{
+        display: block;
+      }
       .homepage-social-horaires{
         width: 100%;
       }

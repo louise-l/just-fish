@@ -1,6 +1,6 @@
 <header >
   <%= cl_image_tag @home_image, class: 'homepage-main-picture'%>
-  <div class="homepage-logo" data-aos="fade-up">
+  <div class="homepage-logo">
     <h1>POISSONNERIE</h1>
     <%= cl_image_tag "https://res.cloudinary.com/debeemobv/image/upload/v1621610775/Seeds/Logo-removebg-preview_semzxt.png", class: ''%>
     <p>La mer près de chez vous</p>
@@ -18,12 +18,16 @@
       <h2>Horaires</h2>
       <p> <%= markdown(@horaires_txt.content) %></p>
     </div>
-    
-    <div class="fb-page" data-href="https://www.facebook.com/JustFish.Poissonnerie.fr" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/JustFish.Poissonnerie.fr" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/JustFish.Poissonnerie.fr">Just Fish Poissonnerie</a></blockquote></div>
+    <div class="mobile">
+            <%= link_to 'https://www.facebook.com/JustFish.Poissonnerie.fr/', target: :_blank do  %>
+          <i class="fab fa-facebook"></i> <small>Just Fish Poissonnerie</small>
+        <% end %>
+    </div>
+    <iframe class = 'facebook-iframe desktop' src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FJustFish.Poissonnerie.fr%2F&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=false&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
   </section>
 
   <% @articles.each do |article| %>
-    <section class="homepage-article" data-aos="fade-right">
+    <section class="homepage-article">
       <% if article.image.attached? %>
       <div class="image-container">
         <%= cl_image_tag article.image.key%>
@@ -38,7 +42,7 @@
   <% end %>
 
 
-  <section class="homepage-recipe" data-aos="fade-left">
+  <section class="homepage-recipe">
     <div>
       <h2><%= @recipe.title %></h2> 
       <%= link_to "Lire la recette de la semaine", recipe_path(@recipe), class: 'button cta-strong'%>
@@ -55,14 +59,14 @@
   <div class="weekly-products-presentation" >
     <h2 class = 'cursive'>La selection de la semaine</h2>
     <p><%= markdown(@weekly_products_txt.content) %></p>
-    <div id="weekly-products" data-aos="fade-up"></div>
+    <div id="weekly-products"></div>
     <%# L'affichage des produits en grand est dans la navbar. %>
     <div class ='button cta-strong' id = 'how-to-order-button'>Comment passer commande ?</div>
   </div>
 
     <%= render 'shared/order' %>
 
-  <div class="who-are-we" data-aos="fade-right">
+  <div class="who-are-we">
     <h2>Qui sommes-nous ?</h2>
     <div class = 'who-are-we-description'>
       <%= markdown(@about_text.content) %>

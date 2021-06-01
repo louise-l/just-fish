@@ -23,7 +23,8 @@
     justify-content: space-around;    
     a{
       font-size: 16px;
-      transition: all 0.5s ease-in-out;
+      transition: border-bottom 0.5s ease-in-out;
+      transition: font-weight 0.5s ease-in-out;
       border-bottom: 4px solid transparent;
       padding-bottom: 10px;
       width: 100%;
@@ -80,7 +81,7 @@
       text-align: center;
       background-color: $light-bg;
       transform:translateX(-100vh);
-      transition: all 0.3s ease-out;
+      transition: transform 0.3s ease-out;
       position: absolute;
       top:50px;
       z-index:10;

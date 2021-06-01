@@ -1,4 +1,4 @@
-<div class="container show-recipe" data-aos="fade-up">
+<div class="container show-recipe">
   <h1><%= @recipe.title %></h1>
   <% if @recipe.image.attached? %>
     <%= cl_image_tag @recipe.image.key, class: 'recipe-image' %>
